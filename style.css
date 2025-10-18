@@ -1,1 +1,171 @@
-/* Add styles here */
+body {
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.cherry {
+    position: absolute;
+    width: 300px;
+    transition: width 2s ease;
+}
+
+.profile-card {
+    position: absolute;
+    background: rgba(115, 123, 120, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 350px;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    transition: backdrop-filter 0.8s ease;
+}
+
+.profile-card:hover {
+    backdrop-filter: blur(2px);
+}
+
+.profile-card img {
+    width: 150px;
+    border-radius: 50%;
+    border: 2.5px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 5px 0 5px;
+    color: #333;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.about {
+    margin-top: -3px;
+    font-size: 17px;
+    color: #000000;
+}
+
+p.bio {
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 20px;
+    transition: color 0.5s ease;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    background: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 22px;
+    color: #333;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+}
+
+.social-links a:hover {
+    color: #306844;
+}
+
+/* 🌐 Responsive Adjustments */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    html, body {
+        overflow: hidden;
+        height: 100%;
+    }
+    .profile-card {
+        width: 80%;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .about {
+        font-size: 15px;
+    }
+
+    .profile-card img {
+        width: 120px;
+    }
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+    html, body {
+        overflow: hidden;
+        height: 100%;
+    }
+    .cherry {
+        width: 250px;
+    }
+
+    .profile-card {
+        width: 100%;
+        max-width: 270px;
+        max-width: 270px;
+        padding: 20px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    .profile-card img {
+        width: 130px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .about {
+        font-size: 14px;
+    }
+
+    p.bio {
+        font-size: 13px;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-links a {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
