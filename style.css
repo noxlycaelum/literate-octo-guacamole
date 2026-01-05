@@ -1,171 +1,128 @@
-body {
-    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    overflow-x: hidden;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap');
+
+:root {
+    --glass-bg: rgba(15, 23, 42, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --accent-blue: #60a5fa;
 }
 
-#bgVideo {
+body {
+    background: #0f172a;
+    color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.bg-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    z-index: -2;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://wallpapercave.com/wp/wp5249721.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease-out;
+}
+
+canvas#rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: -1;
+    pointer-events: none;
 }
 
-.cherry {
-    position: absolute;
-    width: 300px;
-    transition: width 2s ease;
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.5rem;
 }
 
-.profile-card {
-    position: absolute;
-    background: rgba(115, 123, 120, 0.1);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    width: 350px;
-    padding: 30px;
-    border-radius: 25px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    transition: backdrop-filter 0.8s ease;
+.mono {
+    font-family: 'JetBrains Mono', monospace;
 }
 
-.profile-card:hover {
-    backdrop-filter: blur(2px);
+.japanese {
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
-.profile-card img {
-    width: 150px;
+.pfp-ring {
+    position: relative;
+    padding: 4px;
+    background: linear-gradient(45deg, var(--accent-blue), transparent, var(--accent-blue));
     border-radius: 50%;
-    border: 2.5px solid #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* animation: rotate 4s linear infinite; */
 }
 
-h1 {
-    margin: 5px 0 5px;
-    color: #333;
-    font-size: 40px;
-    font-weight: 600;
-}
-
-.about {
-    margin-top: -3px;
-    font-size: 17px;
-    color: #000000;
-}
-
-p.bio {
-    font-size: 15px;
-    color: #fff;
-    margin-bottom: 20px;
-    transition: color 0.5s ease;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.social-links a {
-    background: #fff;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 22px;
-    color: #333;
-    transition: color 0.3s ease;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height: 45px;
-}
-
-.social-links a:hover {
-    color: #306844;
-}
-
-/* 🌐 Responsive Adjustments */
-
-/* Tablets */
-@media (max-width: 1024px) {
-    html, body {
-        overflow: hidden;
-        height: 100%;
-    }
-    .profile-card {
-        width: 80%;
-        padding: 25px;
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
     }
 
-    h1 {
-        font-size: 32px;
-    }
-
-    .about {
-        font-size: 15px;
-    }
-
-    .profile-card img {
-        width: 120px;
+    to {
+        transform: rotate(360deg);
     }
 }
 
-/* 📱 Mobile */
-@media (max-width: 600px) {
-    html, body {
-        overflow: hidden;
-        height: 100%;
-    }
-    .cherry {
-        width: 250px;
+.nav-link {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-blue);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-blue);
+}
+
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
     }
 
-    .profile-card {
-        width: 100%;
-        max-width: 270px;
-        max-width: 270px;
-        padding: 20px;
-        border-radius: 20px;
-        margin: auto;
+    50% {
+        transform: translateY(-10px);
     }
 
-    .profile-card img {
-        width: 130px;
-    }
-
-    h1 {
-        font-size: 26px;
-    }
-
-    .about {
-        font-size: 14px;
-    }
-
-    p.bio {
-        font-size: 13px;
-    }
-
-    .social-links {
-        gap: 10px;
-    }
-
-    .social-links a {
-        width: 45px;
-        height: 45px;
-        font-size: 20px;
+    100% {
+        transform: translateY(0px);
     }
 }
