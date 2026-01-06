@@ -1,245 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ray | Developer & Storyteller</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ray – Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/pfp.jpg">
+    <link rel="icon" type="image/x-icon" href="/icon.svg">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://helloray.vercel.app/">
     <meta property="og:title" content="Ray's Portfolio | Robotics & Full-Stack Dev">
-    <meta property="og:description" content="Hobbyist full-stack developer interested in robotics, LLMs, and philosophy.">
+    <meta property="og:description"
+        content="Hobbyist full-stack developer interested in robotics, LLMs, and philosophy.">
     <meta property="og:image" content="/pfp.jpg">
     <meta property="og:image:alt" content="Ray's profile picture with a creative tech vibe">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://helloray.vercel.app/">
     <meta name="twitter:title" content="Ray's Portfolio | Robotics & Full-Stack Dev">
-    <meta name="twitter:description" content="Hobbyist full-stack developer interested in robotics, LLMs, and philosophy.">
+    <meta name="twitter:description"
+        content="Hobbyist full-stack developer interested in robotics, LLMs, and philosophy.">
     <meta name="twitter:image" content="./pfp.jpg">
     <meta name="twitter:image:alt" content="Ray's profile picture with a creative tech vibe">
-    
-    <!-- Vercel Web Analytics -->
     <script>
-      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
 </head>
-<body class="selection:bg-blue-500/30">
 
-    <div class="bg-container" id="bg"></div>
-    <canvas id="rain"></canvas>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">Ray</div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
 
-    <nav class="fixed top-0 w-full z-50 px-6 py-4">
-        <div class="max-w-6xl mx-auto flex justify-between items-center glass-card px-6 py-3">
-            <div class="text-xl font-bold tracking-tighter mono">
-                RAY<span class="text-blue-400">.dev</span>
-            </div>
-            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-semibold">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#interests" class="nav-link">Interests</a>
-            </div>
-            <div class="text-xl">
-                <i class="fa-solid fa-cloud-showers-heavy text-blue-400"></i>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col items-center justify-center px-6 pt-20">
-        <div class="glass-card p-8 md:p-12 max-w-4xl w-full flex flex-col md:flex-row items-center gap-10">
-            <div class="relative">
-                <!-- Profile picture was created by sanya on https://danbooru.donmai.us/posts/6268333, please mail me for any copyright stuff -->
-                <div class="pfp-ring">
-                    <img src="./pfp.jpg" 
-                         alt="Ray" 
-                         class="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover relative z-10 bg-slate-800">
-                </div>
-            </div>
-
-            <div class="text-center md:text-left flex-1">
-                <h2 class="text-blue-400 mono mb-2 tracking-widest">HELLO, I AM</h2>
-                <h1 class="text-5xl md:text-7xl font-bold mb-4 tracking-tight">Ray</h1>
-                <p class="text-lg md:text-xl text-slate-300 leading-relaxed italic">
-                    "Crafting digital rain in a world of code."
+        <section class="hero" id="about">
+            <div>
+                <div class="pill">Full‑stack hobbyist developer</div>
+                <h1>Hi, I'm Ray</h1>
+                <p class="bio">
+                    Full-stack hobbyist developer with hands-on experience in Node.js, chatbots, and RESTful API
+                    development. Passionate about exploring the frontiers of robotics, large language models, and
+                    philosophy. Outside of code, I'm an avid cinephile, sci-fi and fantasy storyteller, and I love
+                    #Anime.
                 </p>
-                <div class="mt-6 flex flex-wrap justify-center md:justify-start gap-4">
-                    <span class="bg-slate-800/50 border border-slate-700 px-3 py-1 rounded-full text-sm mono">#Node.js</span>
-                    <span class="bg-slate-800/50 border border-slate-700 px-3 py-1 rounded-full text-sm mono">#Chatbots</span>
-                    <span class="bg-slate-800/50 border border-slate-700 px-3 py-1 rounded-full text-sm mono">#LLM</span>
-                    <span class="bg-slate-800/50 border border-slate-700 px-3 py-1 rounded-full text-sm mono">#Philosopher</span>
+                <div class="cta-row">
+                    <a class="btn primary" href="#projects">See work</a>
+                    <a class="btn" href="#contact">Contact</a>
                 </div>
             </div>
-        </div>
-        
-        <a href="#about" class="mt-12 text-slate-400 animate-bounce cursor-pointer">
-            <i class="fa-solid fa-chevron-down text-2xl"></i>
-        </a>
-    </section>
+            <div>
+                <img src="./pfp.jpg" alt="Ray profile picture" />
+            </div>
+        </section>
 
-    <!-- Content Sections -->
-    <main class="max-w-5xl mx-auto px-6 pb-24 space-y-24">
-        
-        <!-- About Section -->
-        <section id="about" class="scroll-mt-32">
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div class="glass-card p-8">
-                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
-                        <i class="fa-solid fa-terminal text-blue-400"></i>
-                        The Bio
-                    </h3>
-                    <p class="text-slate-300 leading-relaxed mb-4">
-                        I'm a full-stack hobbyist developer with a specialized focus on <span class="text-blue-300">Node.js ecosystem</span>. I spend my time architecting intelligent chatbots and robust RESTful APIs.
-                    </p>
-                    <p class="text-slate-300 leading-relaxed">
-                        My curiosity drives me toward the frontiers of robotics and Large Language Models, where I try to find the intersection between logical code and deep philosophy.
-                    </p>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Node.js APIs</h3>
+                    <p>RESTful backends, authentication, rate limiting, and clean architecture experiments.</p>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="glass-card p-6 text-center hover:border-blue-500/50 transition-colors">
-                        <i class="fa-solid fa-robot text-3xl mb-3 text-blue-400"></i>
-                        <h4 class="font-bold">Robotics</h4>
-                    </div>
-                    <div class="glass-card p-6 text-center hover:border-blue-500/50 transition-colors">
-                        <i class="fa-solid fa-brain text-3xl mb-3 text-purple-400"></i>
-                        <h4 class="font-bold">LLMs</h4>
-                    </div>
-                    <div class="glass-card p-6 text-center hover:border-blue-500/50 transition-colors">
-                        <i class="fa-solid fa-film text-3xl mb-3 text-red-400"></i>
-                        <h4 class="font-bold">Cinephile</h4>
-                    </div>
-                    <div class="glass-card p-6 text-center hover:border-blue-500/50 transition-colors">
-                        <i class="fa-solid fa-book text-3xl mb-3 text-amber-400"></i>
-                        <h4 class="font-bold">Writing</h4>
-                    </div>
+                <div class="card">
+                    <h3>Chatbots</h3>
+                    <p>Conversational agents integrating LLM APIs and custom prompt orchestration.</p>
+                </div>
+                <div class="card">
+                    <h3>Robotics tinkering</h3>
+                    <p>Control logic prototypes, sensor data handling, and autonomy concepts.</p>
+                </div>
+                <div class="card">
+                    <h3>Stories & worldbuilding</h3>
+                    <p>Original sci‑fi and fantasy tales, with cinematic influences and #アニメ flair.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Passions Section -->
-        <section id="interests" class="scroll-mt-32">
-            <div class="glass-card p-8 md:p-12">
-                <div class="text-center mb-12">
-                    <h3 class="text-3xl font-bold mb-2">Outside the Code</h3>
-                    <div class="w-24 h-1 bg-blue-500 mx-auto rounded-full"></div>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="space-y-4">
-                        <h4 class="text-xl font-semibold flex items-center gap-2">
-                            <i class="fa-solid fa-pen-nib text-blue-400"></i>
-                            Storyteller
-                        </h4>
-                        <p class="text-slate-400 text-sm">Crafting intricate sci-fi and fantasy worlds where technology meets myth. Exploring the "what ifs" of our future.</p>
-                    </div>
-                    <div class="space-y-4">
-                        <h4 class="text-xl font-semibold flex items-center gap-2">
-                            <i class="fa-solid fa-heart text-pink-400"></i>
-                            Admirer <span class="japanese text-sm opacity-50">#アニメ</span>
-                        </h4>
-                        <p class="text-slate-400 text-sm">Deep appreciation for the visual storytelling and atmosphere found in classic and modern anime aesthetics.</p>
-                    </div>
-                    <div class="space-y-4">
-                        <h4 class="text-xl font-semibold flex items-center gap-2">
-                            <i class="fa-solid fa-quote-left text-green-400"></i>
-                            Philosopher
-                        </h4>
-                        <p class="text-slate-400 text-sm">Questioning the nature of intelligence, existence, and our place in an increasingly automated universe.</p>
-                    </div>
-                </div>
+        <section id="contact" style="margin-top: 40px;">
+            <h2>Contact</h2>
+            <p class="bio">Open to collaborations, geeky chats, and ambitious ideas. Reach out any time.</p>
+            <div class="cta-row">
+                <a class="btn primary" href="mailto:sugarcrashcat@outlook.com">Email</a>
+                <a class="btn" href="https://www.reddit.com/user/CosmicRazzle/" target="_blank" rel="noopener noreferrer">Reddit</a>
+                <a class="btn" href="https://github.com/noxlycaelum" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="btn" href="https://discord.com/invite/hdXf6XHvMk" target="_blank" rel="noopener noreferrer">Discord</a>
+                <a class="btn" href="https://instagram.com/noxlycaelum" target="_blank" rel="noopener noreferrer">Instagram</a>
             </div>
         </section>
 
-    </main>
-
-    <!-- Footer -->
-    <footer class="py-12 border-t border-slate-800/50 text-center relative">
-        <div class="mono text-slate-500 text-sm">
-            <p>Made with 🌧️ and coffee by Ray</p>
-            <p class="mt-2">&copy; <span id="year"></span> — Constant evolution</p>
-        </div>
-        <div class="mt-6 flex justify-center gap-6 text-slate-400 text-xl">
-            <a href="https://github.com/noxlycaelum" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.reddit.com/user/CosmicRazzle/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-reddit"></i></a>
-            <a href="https://discord.com/invite/hdXf6XHvMk" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-discord"></i></a>
-            <a href="https://instagram.com/noxlycaelum" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
-            <a href="mailto:smirkingtoast@outlook.com" class="hover:text-blue-400 transition-colors"><i class="fa-solid fa-envelope"></i></a>
-          </div>
-          
-    </footer>
+        <footer>
+            © <span id="year"></span> Ray — Crafted with curiosity
+        </footer>
+    </div>
 
     <script>
-        // Rain Animation
-        const canvas = document.getElementById('rain');
-        const ctx = canvas.getContext('2d');
-        const bg = document.getElementById('bg');
-
-        let width, height, rainDrops;
-
-        function initRain() {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
-            rainDrops = Array.from({ length: 400 }, () => ({
-                x: Math.random() * width,
-                y: Math.random() * height,
-                length: Math.random() * 20 + 10,
-                speed: Math.random() * 10 + 5,
-                opacity: Math.random() * 0.3
-            }));
-        }
-
-        function drawRain() {
-            ctx.clearRect(0, 0, width, height);
-            ctx.strokeStyle = 'rgba(173, 216, 230, 0.5)';
-            ctx.lineWidth = 1;
-            ctx.lineCap = 'round';
-
-            rainDrops.forEach(drop => {
-                ctx.beginPath();
-                ctx.moveTo(drop.x, drop.y);
-                ctx.lineTo(drop.x + (drop.speed * 0.1), drop.y + drop.length);
-                ctx.stroke();
-
-                drop.y += drop.speed;
-                drop.x += drop.speed * 0.1;
-
-                if (drop.y > height) {
-                    drop.y = -drop.length;
-                    drop.x = Math.random() * width;
-                }
-            });
-
-            requestAnimationFrame(drawRain);
-        }
-
-        // Parallax effect on background
-        window.addEventListener('mousemove', (e) => {
-            const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
-            const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
-            bg.style.transform = `scale(1.1) translate(${moveX}px, ${moveY}px)`;
-        });
-
-        window.addEventListener('resize', initRain);
-        
-        // Year update
+        // dynamic year
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Smooth scroll
+        // smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetId = this.getAttribute('href').substring(1);
+                const target = document.getElementById(targetId);
+                if (target) {
+                    e.preventDefault();
+                    window.scrollTo({ top: target.offsetTop - 10, behavior: 'smooth' });
+                }
             });
         });
-
-        // Initialize
-        initRain();
-        drawRain();
     </script>
 </body>
+
 </html>
