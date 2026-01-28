@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ray | About</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "pure-black": "#000000",
+                        "pure-white": "#FFFFFF",
+                        "swiss-red": "#B11226",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "serif": ["'Playfair Display'", "serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-pure-white text-pure-black font-sans antialiased selection:bg-swiss-red selection:text-pure-white;
+            }
+        }
+        .editorial-header {
+            font-size: clamp(3rem, 8vw, 6rem);
+            letter-spacing: -0.03em;
+        }
+        .nav-link {
+            @apply text-[10px] uppercase tracking-[0.3em] font-medium hover:text-swiss-red transition-colors;
+        }
+        .image-container {
+            aspect-ratio: 4/5;
+        }
+        .swiss-border {
+            border-left: 1px solid rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="relative min-h-screen w-full overflow-x-hidden flex flex-col">
+        <nav class="fixed top-0 left-0 w-full z-50 p-8 md:p-12 pointer-events-none">
+            <div class="flex justify-between items-start w-full">
+                <div class="pointer-events-auto">
+                    <a class="nav-link" href="/index.html">Home</a>
+                </div>
+                <div class="pointer-events-auto flex gap-10">
+                    <a class="nav-link" href="/skills.html">Skills</a>
+                    <a class="nav-link" href="/contact.html">Contact</a>
+                </div>
+            </div>
+        </nav>
+        <nav class="fixed bottom-0 left-0 w-full z-50 p-8 md:p-12 pointer-events-none">
+            <div class="flex justify-between items-end w-full">
+                <div class="pointer-events-auto flex flex-col gap-2">
+                    <a class="nav-link" href="https://discord.com/invite/hdXf6XHvMk" target="_blank">Discord</a>
+                </div>
+                <div class="pointer-events-auto text-right">
+                    <p class="nav-link">©2026 Ray. Built with intent.</p>
+                </div>
+            </div>
+        </nav>
+        <main class="flex-1 flex items-center justify-center px-8 md:px-24 py-32">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full">
+                <div class="lg:col-span-5 relative">
+                    <div class="image-container overflow-hidden bg-neutral-100 rounded-lg transition-all duration-700 ease-in-out">
+                        <img alt="Abstract Portrait/Robotic Element"
+                            class="w-full h-full object-cover"
+                            src="https://i.pinimg.com/736x/a8/28/70/a8287059d237bbd396a4d66aa4b08000.jpg" />
+                    </div>
+                    <div
+                        class="absolute -bottom-6 -right-6 flex items-center justify-center w-12 h-12 bg-swiss-red text-white">
+                        <span class="material-symbols-outlined text-xl">smart_toy</span>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 flex flex-col justify-center">
+                    <div class="mb-6 flex items-center gap-4">
+                        <span class="h-px w-12 bg-swiss-red"></span>
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-swiss-red">The Story</span>
+                    </div>
+                    <h1 class="editorial-header font-serif leading-[0.9] mb-12">
+                        About <br />Ray.
+                    </h1>
+                    <div class="max-w-xl space-y-8">
+                        <p class="text-xl md:text-2xl leading-[1.6] text-pure-black/80 font-normal">
+                            Ray’s journey began at the intersection of logical structures and human curiosity. As a
+                            full-stack hobbyist, he bridges the gap between functional code and the poetic nature of
+                            <span class="italic text-swiss-red font-serif">robotics</span>.
+                        </p>
+                        <p class="text-lg md:text-xl leading-[1.8] text-pure-black/60 font-light">
+                            Driven by a lifelong fascination with <span
+                                class="italic font-serif text-pure-black">philosophy</span>, his work isn't just about
+                            building tools, but questioning the nature of our interactions with autonomous systems.
+                            Every project is an experiment in minimalist engineering—stripping away the noise to find
+                            the core purpose of a digital experience.
+                        </p>
+                        <div class="pt-8 grid grid-cols-2 gap-8 border-t border-black/5">
+                            <div>
+                                <h4 class="text-[10px] uppercase tracking-widest font-bold mb-2">Focus</h4>
+                                <ul class="text-sm space-y-1 text-pure-black/70">
+                                    <li>Entrepreneurship</li>
+                                    <li>AI Reserach</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-[10px] uppercase tracking-widest font-bold mb-2">Current State</h4>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-swiss-red"></span>
+                                    <span class="text-sm text-pure-black/70">Building in business</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
