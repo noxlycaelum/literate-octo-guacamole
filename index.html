@@ -31,15 +31,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <script id="tailwind-config">
         tailwind.config = {
             theme: {
@@ -60,6 +56,20 @@
     <style>
         * {
             cursor: none !important;
+        }
+        html.lenis {
+            height: auto;
+        }
+        .lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        body {
+            overflow: hidden; /* For general browsers */
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        body::-webkit-scrollbar {
+            display: none;  /* Chrome, Safari, Opera */
         }
     </style>
 
@@ -115,7 +125,7 @@
 
 <body class="cursor-none">
     <div class="relative w-full overflow-x-hidden flex flex-col">
-        <nav class="fixed top-0 left-0 w-full z-50 p-8 md:p-12 pointer-events-none">
+        <nav class="hidden fixed top-0 left-0 w-full z-50 p-8 md:p-12 pointer-events-none">
             <div class="flex justify-between items-start w-full">
                 <div class="pointer-events-auto">
                     <a class="nav-link" href="#home">Home</a>
@@ -127,7 +137,7 @@
                 </div>
             </div>
         </nav>
-        <nav class="fixed bottom-0 left-0 w-full z-50 p-8 md:p-12 pointer-events-none">
+        <nav class="hidden fixed bottom-0 left-0 w-full z-50 p-8 md:p-12 pointer-events-none">
             <div class="flex justify-between items-end w-full">
                 <div class="pointer-events-auto flex flex-col gap-2">
                     <a class="nav-link" href="https://discord.com/invite/hdXf6XHvMk" target="_blank">Discord</a>
@@ -140,7 +150,7 @@
         </nav>
 
         <section id="home" class="min-h-screen flex flex-col items-center justify-center px-6 py-32 relative">
-            <div class="w-full max-w-4xl flex flex-col items-center text-center">
+            <div class="end-text w-full max-w-4xl flex flex-col items-center text-center">
                 <div class="mb-12 group cursor-default hover">
                     <div class="inline-flex items-center px-4 py-2 border border-pure-black/10 rounded-full text-[10px] uppercase tracking-widest font-semibold transition-all duration-300 group-hover:border-pure-black">
                         <span class="status-dot"></span>
@@ -163,7 +173,7 @@
         </section>
 
         <section id="about" class="min-h-screen flex items-center justify-center px-8 md:px-24 py-32 bg-pure-white relative">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full">
+            <div class="end-text grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full">
                 <div class="lg:col-span-5 relative">
                     <div class="image-container overflow-hidden bg-neutral-100 rounded-lg">
                         <img alt="Abstract Portrait/Robotic Element" 
@@ -214,7 +224,7 @@
             </div>
         </section>
         <section id="skills" class="flex-1 flex items-center justify-center px-8 md:px-24 py-32">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full mx-auto">
+            <div class="end-text grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full mx-auto">
                 <div class="lg:col-span-5 relative lg:order-last">
                     <div class="image-container overflow-hidden bg-neutral-100 rounded-lg">
                         <img alt="Robotic Hand or Abstract Circuit Pattern"
@@ -270,7 +280,7 @@
             </div>
         </section>
         <section id="contact" class="min-h-screen flex items-center justify-center px-8 md:px-24 py-32">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full">
+            <div class="end-text grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full">
                 <div class="lg:col-span-5 relative">
                     <div class="image-container overflow-hidden bg-neutral-100 rounded-lg transition-all duration-700 ease-in-out">
                         <img alt="Robotic Hand or Abstract Circuit Pattern"
@@ -328,7 +338,7 @@
                 </div>
             </div>
         </section>
-        <section id="footer" class="min-h-screen flex items-center justify-center px-8 md:px-24 py-32">
+        <section id="footer" class="end-text min-h-screen flex items-center justify-center px-8 md:px-24 py-32">
             <div class="grid grid-cols-1 gap-16 items-center max-w-7xl w-full text-center">
                 <h1 class="editorial-header font-serif leading-[0.9] mb-12 text-9xl md:text-6xl lg:text-9xl">
                     Crafted with <span class="text-accent">Intent</span>.

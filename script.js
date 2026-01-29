@@ -1,14 +1,14 @@
 const cursorOutline = document.querySelector("#cursor-outline");
 
 window.addEventListener("mousemove", (e) => {
-  const { clientX, clientY, target } = e;
-  cursorOutline.style.translate = `${clientX}px ${clientY}px`;
-  const isHoverable = target.closest('a, button, img, h1, .hover');
-  if (isHoverable) {
-    cursorOutline.classList.add('scale-150');
-  } else {
-    cursorOutline.classList.remove('scale-150');
-  }
+    const { clientX, clientY, target } = e;
+    cursorOutline.style.translate = `${clientX}px ${clientY}px`;
+    const isHoverable = target.closest('a, button, img, h1, .hover');
+    if (isHoverable) {
+        cursorOutline.classList.add('scale-150');
+    } else {
+        cursorOutline.classList.remove('scale-150');
+    }
 });
 
 document.addEventListener("mouseout", () => {
@@ -22,11 +22,30 @@ document.addEventListener("mouseover", () => {
 const textElements = document.querySelectorAll('.anime-text');
 
 textElements.forEach(textElement => {
-  const words = textElement.textContent.trim().split(/\s+/);
+    const words = textElement.textContent.trim().split(/\s+/);
 
-  textElement.innerHTML = words.map(word => 
-    `<span class="word inline-block overflow-hidden">
+    textElement.innerHTML = words.map(word =>
+        `<span class="word inline-block overflow-hidden">
        <span class="char inline-block">${word}</span>
      </span>`
-  ).join(' ');
+    ).join(' ');
 });
+
+const lenis = new Lenis({
+    duration: 1.35,   // How long the "glide" lasts
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // High-end exponential easing
+    smoothWheel: true,
+    wheelMultiplier: 0.8, // Speed of the scroll
+});
+
+// The animation frame loop
+function raf(time) {
+    lenis.raf(time);
+    lenis.on('scroll', ({ scroll }) => {
+        const target = document.querySelector('.end-text');
+        target.style.transform = `translateY(${scroll * 0.05}px)`;
+    });
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);

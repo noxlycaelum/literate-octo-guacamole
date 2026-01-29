@@ -1,5 +1,5 @@
 const observerOptions = {
-    threshold: 0.4 // Trigger when 40% is visible for a better feel
+    threshold: 0.5 // Trigger when 40% is visible for a better feel
 };
 
 const observer = new IntersectionObserver((entries) => {
