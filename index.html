@@ -39,6 +39,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
         rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script id="tailwind-config">
         tailwind.config = {
             theme: {
@@ -157,7 +158,6 @@
                         Full-stack hobbyist developer and tinkerer, exploring the intersection of <span class="italic font-serif text-accent">robotics</span> and <span class="italic font-serif text-accent">large language models</span>. Crafting digital experiences through the lens of minimalist engineering and playful philosophy.
                     </p>
                 </div>
-                
                 <div class="mt-20 w-px h-24 bg-gradient-to-b from-pure-black to-transparent"></div>
             </div>
         </section>
@@ -167,10 +167,10 @@
                 <div class="lg:col-span-5 relative">
                     <div class="image-container overflow-hidden bg-neutral-100 rounded-lg">
                         <img alt="Abstract Portrait/Robotic Element" 
-                        class="w-full h-full object-cover grayscale hover:grayscale-0 scale-100 hover:scale-110 transition-all duration-700 ease-in-out will-change-transform" 
+                        class="reveal-image w-full h-full object-cover grayscale scale-100 will-change-transform"
                         src="https://i.pinimg.com/736x/a8/28/70/a8287059d237bbd396a4d66aa4b08000.jpg" />
                     </div>
-                    <div class="absolute -bottom-6 -right-6 flex items-center justify-center w-12 h-12 bg-accent text-white">
+                    <div class="robo-con absolute -bottom-6 -right-6 flex items-center justify-center w-12 h-12 bg-accent text-white">
                         <span class="material-symbols-outlined text-xl">smart_toy</span>
                     </div>
                 </div>
@@ -181,19 +181,19 @@
                         <span class="text-[10px] uppercase tracking-widest font-bold text-accent">The Story</span>
                     </div>
                     
-                    <h1 class="editorial-header font-serif leading-[0.9] mb-12 appear">
+                    <h1 class="anime-text editorial-header font-serif leading-[0.9] mb-12 appear">
                         About <br />Ray<span class="text-accent">.</span>
                     </h1>
                     
                     <div class="max-w-xl space-y-8">
-                        <p class="text-xl md:text-2xl leading-[1.6] text-pure-black/80 font-normal">
+                        <p class="text-fade text-xl md:text-2xl leading-[1.6] text-pure-black/80 font-normal">
                             Ray’s journey began at the intersection of logical structures and human curiosity. As a full-stack hobbyist, he bridges the gap between functional code and the poetic nature of <span class="italic text-accent font-serif">robotics</span>.
                         </p>
-                        <p class="text-lg md:text-xl leading-[1.8] text-pure-black/60 font-light">
-                            Driven by a lifelong fascination with <span class="italic font-serif text-pure-black">philosophy</span>, his work isn't just about building tools, but questioning the nature of our interactions with autonomous systems. Every project is an experiment in minimalist engineering—stripping away the noise to find the core purpose of a digital experience.
+                        <p class="text-fade text-lg md:text-xl leading-[1.8] text-pure-black/60 font-light">
+                            Driven by a lifelong fascination with <span class="italic font-serif text-accent">philosophy</span>, his work isn't just about building tools, but questioning the nature of our interactions with autonomous systems. Every project is an experiment in minimalist engineering—stripping away the noise to find the core purpose of a digital experience.
                         </p>
 
-                        <div class="pt-8 grid grid-cols-2 gap-8 border-t border-black/5">
+                        <div class="element-slide pt-8 grid grid-cols-2 gap-8 border-t border-black/5">
                             <div>
                                 <h4 class="text-[10px] uppercase tracking-widest font-bold mb-2">Focus</h4>
                                 <ul class="text-sm space-y-1 text-pure-black/70">
@@ -218,8 +218,8 @@
                 <div class="lg:col-span-5 relative lg:order-last">
                     <div class="image-container overflow-hidden bg-neutral-100 rounded-lg">
                         <img alt="Robotic Hand or Abstract Circuit Pattern"
-                            class="w-full h-full object-cover grayscale hover:grayscale-0 scale-100 hover:scale-110 transition-all duration-700 ease-in-out will-change-transform"
-                            src="https://i.pinimg.com/1200x/85/9d/4f/859d4f8d29362c1809dd05381cb9b027.jpg" />
+                        class="reveal-image w-full h-full object-cover grayscale scale-100 will-change-transform"
+                        src="https://i.pinimg.com/1200x/85/9d/4f/859d4f8d29362c1809dd05381cb9b027.jpg" />
                     </div>
                     <div class="absolute -bottom-6 -left-6 flex items-center justify-center w-12 h-12 bg-accent text-white shadow-xl">
                         <span class="material-symbols-outlined text-xl">smart_toy</span>
@@ -231,21 +231,20 @@
                         <span class="h-px w-12 bg-accent"></span>
                         <span class="text-[10px] uppercase tracking-widest font-bold text-accent">Technical Proficiency</span>
                     </div>
-                    <h1 class="editorial-header font-serif leading-[0.9] mb-12 text-pure-black">Skills<span class="text-accent">.</span></h1>
-                    
+                    <h1 class="anime-text editorial-header font-serif leading-[0.9] mb-12 text-pure-black">My Skills<span class="text-accent">.</span></h1>
                     <div class="max-w-xl space-y-8">
-                        <p class="text-xl md:text-2xl leading-[1.6] text-pure-black/80 font-normal">
+                        <p class="text-fade text-xl md:text-2xl leading-[1.6] text-pure-black/80 font-normal">
                             Engineering at the edge where software meets the physical world. Ray crafts systems that
                             leverage <span class="italic text-accent font-serif">computational logic</span> to
                             animate static components into responsive, intelligent entities.
                         </p>
-                        <p class="text-lg md:text-xl leading-[1.8] text-pure-black/60 font-light">
+                        <p class="text-fade text-lg md:text-xl leading-[1.8] text-pure-black/60 font-light">
                             Specializing in the deployment of autonomous architectures, the focus remains on the <span
                                 class="italic font-serif text-accent">seamless integration</span> of complex backend
                             logic with tactile hardware interfaces.
                         </p>
         
-                        <div class="pt-8 grid grid-cols-2 gap-8 border-t border-black/5">
+                        <div class="element-slide pt-8 grid grid-cols-2 gap-8 border-t border-black/5">
                             <div>
                                 <h4 class="text-[10px] uppercase tracking-widest font-bold mb-4 text-pure-black/40">Stack</h4>
                                 <ul class="text-base space-y-2 text-pure-black/70 font-medium">
@@ -275,7 +274,7 @@
                 <div class="lg:col-span-5 relative">
                     <div class="image-container overflow-hidden bg-neutral-100 rounded-lg transition-all duration-700 ease-in-out">
                         <img alt="Robotic Hand or Abstract Circuit Pattern"
-                        class="w-full h-full object-cover grayscale hover:grayscale-0 scale-100 hover:scale-110 transition-all duration-700 ease-in-out will-change-transform"
+                        class="reveal-image w-full h-full object-cover grayscale scale-100 will-change-transform"
                             src="https://i.pinimg.com/1200x/c2/02/b6/c202b6ba54cca7769ce64175453760e4.jpg" />
                     </div>
                     <div class="absolute -bottom-6 -right-6 flex items-center justify-center w-12 h-12 bg-accent text-white">
@@ -287,13 +286,13 @@
                         <span class="h-px w-12 bg-accent"></span>
                         <span class="text-[10px] uppercase tracking-widest font-bold text-accent">Reach Out</span>
                     </div>
-                    <h1 class="editorial-header font-serif leading-[0.9] mb-12">Connect<span class="text-accent">.</span></h1>
+                    <h1 class="anime-text editorial-header font-serif leading-[0.9] mb-12">Contact Me<span class="text-accent">.</span></h1>
                     <div class="max-w-xl space-y-8">
-                        <p class="text-xl md:text-2xl leading-[1.6] text-pure-black/80 font-normal">
+                        <p class="text-fade text-xl md:text-2xl leading-[1.6] text-pure-black/80 font-normal">
                             Open for <span class="italic text-accent font-serif">collaboration</span> on projects
                             that push the boundaries of design and logic. Let’s explore <span class="italic font-serif">new frontiers</span> together.
                         </p>
-                        <div class="pt-8 grid grid-cols-2 gap-8 border-t border-black/5">
+                        <div class="element-slide pt-8 grid grid-cols-2 gap-8 border-t border-black/5">
                             <div>
                                 <h4 class="text-[10px] uppercase tracking-widest font-bold mb-4 text-pure-black/40">
                                     Inquiries</h4>
@@ -340,6 +339,7 @@
     <div id="cursor-outline"
         class="fixed top-0 left-0 w-8 h-8 border-2 border-accent rounded-full pointer-events-none z-50 transition-transform duration-150 ease-out -translate-x-1/2 -translate-y-1/2">
     </div>
+    <script src="ame.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
