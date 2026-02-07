@@ -1,24 +1,3 @@
-const cursorOutline = document.querySelector("#cursor-outline");
-
-window.addEventListener("mousemove", (e) => {
-    const { clientX, clientY, target } = e;
-    cursorOutline.style.translate = `${clientX}px ${clientY}px`;
-    const isHoverable = target.closest('a, button, img, h1, .hover');
-    if (isHoverable) {
-        cursorOutline.classList.add('scale-150');
-    } else {
-        cursorOutline.classList.remove('scale-150');
-    }
-});
-
-document.addEventListener("mouseout", () => {
-    cursorOutline.style.opacity = "0";
-});
-
-document.addEventListener("mouseover", () => {
-    cursorOutline.style.opacity = "1";
-});
-
 const textElements = document.querySelectorAll('.anime-text');
 
 textElements.forEach(textElement => {
@@ -32,13 +11,12 @@ textElements.forEach(textElement => {
 });
 
 const lenis = new Lenis({
-    duration: 1.35,   // How long the "glide" lasts
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // High-end exponential easing
+    duration: 1.35,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     smoothWheel: true,
-    wheelMultiplier: 0.8, // Speed of the scroll
+    wheelMultiplier: 0.8,
 });
 
-// The animation frame loop
 function raf(time) {
     lenis.raf(time);
     lenis.on('scroll', ({ scroll }) => {
