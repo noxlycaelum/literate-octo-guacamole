@@ -25,8 +25,6 @@
     <meta name="twitter:title" content="Ray — Full-Stack Developer & Entrepreneur" />
     <meta name="twitter:description" content="Creative full-stack developer and builder of experimental tech and intelligent systems." />
     <!-- <meta name="twitter:image" content="https://yourdomain.com/og-image.jpg" /> -->
-
-    <!-- Optional Extras -->
     <meta name="format-detection" content="telephone=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -65,19 +63,21 @@
         .lenis-smooth {
             scroll-behavior: auto !important;
         }
-        body {
-            overflow: hidden; /* For general browsers */
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
-        body::-webkit-scrollbar {
-            display: none;  /* Chrome, Safari, Opera */
+        @media (min-width: 1024px) {
+            body {
+            overflow: hidden;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            }
+            body::-webkit-scrollbar {
+            display: none;
+            }
         }
         .char, 
         .text-fade, 
         .element-slide {
             opacity: 0;
-            will-change: transform, opacity; /* Optimizes performance */
+            will-change: transform, opacity;
         }
     </style>
 
@@ -87,8 +87,6 @@
                     @apply bg-pure-white text-pure-black font-sans antialiased selection:bg-accent selection:text-pure-white;
                 }
             }
-    
-            /* Typography */
             .hero-title {
                 font-size: clamp(5rem, 15vw, 12rem);
                 letter-spacing: -0.02em;
@@ -98,15 +96,12 @@
                 letter-spacing: -0.03em;
             }
     
-            /* Navigation */
             .nav-link {
                @apply text-[10px] uppercase font-medium
                tracking-[0.3em] hover:tracking-[0.5em]
                text-pure-black hover:text-accent
                transition-[letter-spacing,color] duration-200 cursor-pointer;
             }
-    
-            /* Animations & Elements */
             .status-dot {
                 @apply w-1.5 h-1.5 rounded-full bg-accent inline-block mr-2;
                 animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
