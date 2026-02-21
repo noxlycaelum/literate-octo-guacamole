@@ -36,6 +36,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script defer src="ame.js"></script>
+    <script src="script.js"></script>
+    <script defer src="scroll-handle.js"></script>
+    <script src="drinkwater.js"></script>
     <script id="tailwind-config">
         tailwind.config = {
             theme: {
@@ -54,19 +58,18 @@
         }
     </script>
     <style>
-        * {
-            cursor: none !important;
-        }
         html.lenis {
             height: auto;
         }
         .lenis-smooth {
             scroll-behavior: auto !important;
         }
-        body {
-            overflow: hidden; /* For general browsers */
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
+        @media (min-width: 1024px) {
+            body {
+                overflow: hidden;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
         }
         body::-webkit-scrollbar {
             display: none;  /* Chrome, Safari, Opera */
@@ -148,7 +151,6 @@
                 </div>
             </div>
         </nav>
-
         <section id="home" class="min-h-screen flex flex-col items-center justify-center px-6 py-32 relative">
             <div class="end-text w-full max-w-4xl flex flex-col items-center text-center">
                 <div class="mb-12 group cursor-default hover">
@@ -173,14 +175,14 @@
         </section>
 
         <section id="about" class="min-h-screen flex items-center justify-center px-8 md:px-24 py-32 bg-pure-white relative">
-            <div class="end-text grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full">
                 <div class="lg:col-span-5 relative">
                     <div class="image-container overflow-hidden bg-neutral-100 rounded-lg">
                         <img alt="Abstract Portrait/Robotic Element" 
                         class="reveal-image w-full h-full object-cover grayscale scale-100 will-change-transform"
                         src="https://i.pinimg.com/736x/a8/28/70/a8287059d237bbd396a4d66aa4b08000.jpg" />
                     </div>
-                    <div class="robo-con absolute -bottom-6 -right-6 flex items-center justify-center w-12 h-12 bg-accent text-white">
+                    <div class="absolute -bottom-6 -right-6 flex items-center justify-center w-12 h-12 bg-accent text-white">
                         <span class="material-symbols-outlined text-xl">smart_toy</span>
                     </div>
                 </div>
@@ -224,7 +226,7 @@
             </div>
         </section>
         <section id="skills" class="flex-1 flex items-center justify-center px-8 md:px-24 py-32">
-            <div class="end-text grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full mx-auto">
                 <div class="lg:col-span-5 relative lg:order-last">
                     <div class="image-container overflow-hidden bg-neutral-100 rounded-lg">
                         <img alt="Robotic Hand or Abstract Circuit Pattern"
@@ -254,7 +256,7 @@
                             logic with tactile hardware interfaces.
                         </p>
         
-                        <div class="element-slide pt-8 grid grid-cols-2 gap-8 border-t border-black/5">
+                        <div class="element-slide element-slide pt-8 grid grid-cols-2 gap-8 border-t border-black/5">
                             <div>
                                 <h4 class="text-[10px] uppercase tracking-widest font-bold mb-4 text-pure-black/40">Stack</h4>
                                 <ul class="text-base space-y-2 text-pure-black/70 font-medium">
@@ -280,7 +282,7 @@
             </div>
         </section>
         <section id="contact" class="min-h-screen flex items-center justify-center px-8 md:px-24 py-32">
-            <div class="end-text grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full">
                 <div class="lg:col-span-5 relative">
                     <div class="image-container overflow-hidden bg-neutral-100 rounded-lg transition-all duration-700 ease-in-out">
                         <img alt="Robotic Hand or Abstract Circuit Pattern"
@@ -338,18 +340,13 @@
                 </div>
             </div>
         </section>
-        <section id="footer" class="end-text min-h-screen flex items-center justify-center px-8 md:px-24 py-32">
-            <div class="grid grid-cols-1 gap-16 items-center max-w-7xl w-full text-center">
+        <section id="footer" class="min-h-screen flex items-center justify-center px-8 md:px-24 py-32">
+            <div class="end-text grid grid-cols-1 gap-16 items-center max-w-7xl w-full text-center">
                 <h1 class="editorial-header font-serif leading-[0.9] mb-12 text-9xl md:text-6xl lg:text-9xl">
                     Crafted with <span class="text-accent">Intent</span>.
                 </h1>
             </div>
         </section>        
     </div>
-    <div id="cursor-outline"
-        class="fixed top-0 left-0 w-8 h-8 border-2 border-accent rounded-full pointer-events-none z-50 transition-transform duration-150 ease-out -translate-x-1/2 -translate-y-1/2">
-    </div>
-    <script src="ame.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
