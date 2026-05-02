@@ -98,8 +98,8 @@
             }
     
             .nav-link {
-               @apply text-[10px] uppercase font-medium
-               tracking-[0.3em] hover:tracking-[0.5em]
+               @apply font-bold
+               hover:tracking-[0.5em]
                text-pure-black hover:text-accent
                transition-[letter-spacing,color] duration-200 cursor-pointer;
             }
@@ -129,30 +129,29 @@
 
 <body>
     <div class="relative w-full overflow-x-hidden flex flex-col">
-        <nav class="hidden fixed top-0 left-0 w-full z-50 p-8 md:p-12 pointer-events-none">
-            <div class="flex justify-between items-start w-full">
+        <nav class="fixed top-0 left-0 w-full z-50 p-8 md:p-8 pointer-events-none">
+            <div class="flex justify-between items-start w-full text-[11px] tracking-[0.3em]">
                 <div class="pointer-events-auto">
-                    <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link font-serif leading-none text-[25px] tracking-wide hover:tracking-wide hover:text-accent" href="#home">Ray<span class="text-accent">.</span></a>
                 </div>
-                <div class="pointer-events-auto flex gap-10">
+                <div class="pointer-events-auto flex gap-10 uppercase">
                     <a class="nav-link" href="#skills">Skills</a>
                     <a class="nav-link" href="#about">About</a>
                     <a class="nav-link" href="#contact">Contact</a>
                 </div>
             </div>
         </nav>
-        <nav class="hidden fixed bottom-0 left-0 w-full z-50 p-8 md:p-12 pointer-events-none">
-            <div class="flex justify-between items-end w-full">
-                <div class="pointer-events-auto flex flex-col gap-2">
+        <nav class="fixed bottom-0 left-0 w-full z-50 p-8 md:p-8 pointer-events-none">
+            <div class="flex justify-between items-end w-full text-[11px] tracking-[0.3em]">
+                <div class="pointer-events-auto flex flex-col gap-2 uppercase">
                     <a class="nav-link" href="https://discord.com/invite/hdXf6XHvMk" target="_blank">Discord</a>
-                    <!-- <a class="nav-link" href="#">Tea</a> -->
                 </div>
                 <div class="pointer-events-auto text-right">
-                    <p class="nav-link">©2026 Ray. Built with intent.</p>
+                    <p class="nav-link font-serif leading-none text-[19px] tracking-wide hover:tracking-wide hover:text-accent">Tea<span class="text-accent">.</span></p>
                 </div>
             </div>
         </nav>
-        <section id="home" class="min-h-screen flex flex-col items-center justify-center px-6 py-32 relative">
+        <section class="min-h-screen flex flex-col items-center justify-center px-6 py-32 relative" id="home">
             <div class="end-text w-full max-w-4xl flex flex-col items-center text-center">
                 <div class="mb-12 group cursor-default hover">
                     <div class="inline-flex items-center px-4 py-2 border border-pure-black/10 rounded-full text-[10px] uppercase tracking-widest font-semibold transition-all duration-300 group-hover:border-pure-black">
@@ -162,7 +161,7 @@
                 </div>
                 
                 <div class="relative mb-12">
-                    <h1 class="hero-title font-serif leading-none">Ray.</h1>
+                    <h1 class="hero-title font-serif leading-none">Ray<span class="text-accent">.</span></h1>
                     <div class="robot-icon material-symbols-outlined select-none">smart_toy</div>
                 </div>
                   
