@@ -17,12 +17,16 @@ const lenis = new Lenis({
     wheelMultiplier: 0.8,
 });
 
-function raf(time) {
-    lenis.raf(time);
-    lenis.on('scroll', ({ scroll }) => {
-        const target = document.querySelector('.end-text');
+// Register scroll event listener once (prevents memory leak and CPU thrashing)
+lenis.on('scroll', ({ scroll }) => {
+    const targets = document.querySelectorAll('.end-text');
+    targets.forEach(target => {
         target.style.transform = `translateY(${scroll * 0.05}px)`;
     });
+});
+
+function raf(time) {
+    lenis.raf(time);
     requestAnimationFrame(raf);
 }
 
