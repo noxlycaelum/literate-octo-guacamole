@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credits & Terms — Ray</title>
+    <meta name="title" content="Credits & Terms — Ray" />
+    <meta name="description" content="Legal terms, image credits, and copyright disclaimer for artwork used on Ray's portfolio." />
+    <meta name="author" content="Ray" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#121212" />
+    <link rel="icon" type="image/svg+xml" href="icon.svg" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet" />
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "pure-black": "#000000",
+                        "pure-white": "#FFFFFF",
+                        "accent": "#B11226",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "serif": ["'Playfair Display'", "serif"]
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-[#121212] text-neutral-300 font-sans antialiased selection:bg-accent selection:text-pure-white;
+            }
+        }
+        .page-header {
+            font-size: clamp(3rem, 7vw, 5rem);
+            letter-spacing: -0.02em;
+        }
+        .watermark-bg {
+            font-size: clamp(8rem, 20vw, 24rem);
+        }
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col justify-between relative overflow-hidden">
+    <!-- Large watermark backdrop text -->
+    <div class="watermark-bg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#161618] font-serif font-bold select-none pointer-events-none whitespace-nowrap z-0 opacity-80">
+        Credits
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="relative z-10 w-full max-w-4xl mx-auto px-6 py-20 flex-grow flex flex-col justify-center">
+        <!-- Back Navigation -->
+        <div class="reveal-element mb-12">
+            <a href="index.html" class="inline-flex items-center gap-2 group text-[11px] font-bold tracking-[0.3em] uppercase text-neutral-400 hover:text-accent transition-colors duration-300">
+                <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:-translate-x-1">arrow_back</span>
+                Back to Home
+            </a>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <header class="reveal-element mb-12">
+            <div class="mb-4 flex items-center gap-4">
+                <span class="h-px w-12 bg-accent"></span>
+                <span class="text-[10px] uppercase tracking-widest font-bold text-accent">Disclaimers & Rights</span>
+            </div>
+            <h1 class="page-header font-serif text-pure-white leading-none mb-4">
+                Credits & Terms<span class="text-accent">.</span>
+            </h1>
+            <p class="text-neutral-400 text-lg font-light max-w-xl">
+                Legal disclosures regarding third-party creative assets and media content utilized across this site.
+            </p>
+        </header>
+
+        <!-- Terms Card -->
+        <article class="reveal-element bg-[#1c1c1e] rounded-[2rem] border border-neutral-800/80 p-8 md:p-12 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-8 text-neutral-800 opacity-20 pointer-events-none">
+                <span class="material-symbols-outlined text-8xl select-none">gavel</span>
+            </div>
+            
+            <div class="space-y-8 relative z-10">
+                <!-- Section 1: Copyright Disclaimer -->
+                <section class="space-y-4">
+                    <h2 class="text-xs uppercase tracking-widest font-bold text-neutral-400 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                        Image Copyright Policy
+                    </h2>
+                    <p class="text-base leading-relaxed text-neutral-300 font-light">
+                        I do not claim ownership, intellectual property rights, or copyright over any of the anime images, graphics, illustrations, or art displayed on this website. All creative media elements belong to their respective original creators, artists, and production studios.
+                    </p>
+                    <p class="text-sm leading-relaxed text-neutral-400 font-light">
+                        These artworks are used solely for aesthetic purposes, mood boards, and conceptual layout representation, and are not intended for commercial monetization or resale.
+                    </p>
+                </section>
+
+                <hr class="border-neutral-800/60" />
+
+                <!-- Section 2: Artist Removal Request -->
+                <section class="space-y-4">
+                    <h2 class="text-xs uppercase tracking-widest font-bold text-neutral-400 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                        Removal & Takedown Requests
+                    </h2>
+                    <p class="text-base leading-relaxed text-neutral-300 font-light">
+                        Respecting artists' rights is extremely important to me. If you are the original artist or copyright holder of any illustration featured on this website and wish to have your content removed, please contact me immediately.
+                    </p>
+                    <p class="text-base leading-relaxed text-neutral-300 font-light">
+                        Simply send an email indicating the specific artwork, and I will remove it from the server and layouts as quickly as possible—no questions asked.
+                    </p>
+                </section>
+
+                <!-- Action Button -->
+                <div class="pt-6 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                    <a href="mailto:raytracingrain@outlook.com" class="inline-flex items-center gap-2 bg-accent hover:bg-accent/80 text-pure-white text-xs font-bold uppercase tracking-widest px-6 py-4 rounded-xl shadow-lg transition-all duration-300 hover:scale-105">
+                        <span class="material-symbols-outlined text-base">mail</span>
+                        Email Removal Request
+                    </a>
+                    <span class="text-xs text-neutral-500 font-mono">
+                        Direct contact: raytracingrain@outlook.com
+                    </span>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 w-full py-8 text-center border-t border-neutral-900 bg-[#161618]/60 backdrop-blur-md text-xs text-neutral-500">
+        <p>© 2026 Ray. All rights reserved. Sourced materials are credited to their respective owners.</p>
+    </footer>
+
+    <!-- Entry Animations script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            anime({
+                targets: '.reveal-element',
+                translateY: [30, 0],
+                opacity: [0, 1],
+                delay: anime.stagger(150, {start: 100}),
+                duration: 1000,
+                easing: 'easeOutExpo'
+            });
+        });
+    </script>
+</body>
+
+</html>
