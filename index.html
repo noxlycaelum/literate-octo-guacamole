@@ -32,14 +32,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet" />
+    <!-- External Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script defer src="script.js"></script>
-    <script type="module" src="ame.js"></script>
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
-    <script defer src="ame.js"></script>
+    
+    <!-- Project Scripts -->
     <script defer src="script.js"></script>
-    <script defer src="scroll-handle.js"></script>
-    <script src="drinkwater.js"></script>
+    <script defer src="ame.js"></script>
     <script id="tailwind-config">
         tailwind.config = {
             theme: {
@@ -123,6 +122,7 @@
     
             .image-container {
                 aspect-ratio: 4/5;
+                width: 100%;
             }
         </style>
 </head>
@@ -177,7 +177,7 @@
         </section>
 
         <section id="about" class="min-h-screen flex items-center justify-center px-8 md:px-24 py-32 relative">
-            <div class="end-text grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full">
+            <div class="end-text grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full mx-auto">
                 <div class="lg:col-span-5 relative">
                     <div class="image-container overflow-hidden bg-neutral-100 rounded-lg">
                         <img alt="Abstract Portrait/Robotic Element" 
@@ -228,7 +228,7 @@
                 </div>
             </div>
         </section>
-        <section id="skills" class="flex-1 flex items-center justify-center px-8 md:px-24 py-32">
+        <section id="skills" class="min-h-screen flex items-center justify-center px-8 md:px-24 py-32">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full mx-auto">
                 <div class="lg:col-span-5 relative lg:order-last">
                     <div class="image-container overflow-hidden bg-neutral-100 rounded-lg">
@@ -285,7 +285,7 @@
             </div>
         </section>
         <section id="contact" class="min-h-screen flex items-center justify-center px-8 md:px-24 py-32">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full mx-auto">
                 <div class="lg:col-span-5 relative">
                     <div class="image-container overflow-hidden bg-neutral-100 rounded-lg transition-all duration-700 ease-in-out">
                         <img alt="Robotic Hand or Abstract Circuit Pattern"
