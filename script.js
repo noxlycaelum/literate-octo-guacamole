@@ -17,13 +17,42 @@ const lenis = new Lenis({
     wheelMultiplier: 0.8,
 });
 
+function updateNavColors() {
+    const footerElement = document.getElementById('footer');
+    if (!footerElement) return;
+    const footerRect = footerElement.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+    
+    // Bottom nav is at the bottom of the viewport (around 80px from bottom)
+    if (footerRect.top <= viewportHeight - 80) {
+        document.body.classList.add('bottom-nav-dark');
+    } else {
+        document.body.classList.remove('bottom-nav-dark');
+    }
+    
+    // Top nav is at the top of the viewport (around 80px from top)
+    if (footerRect.top <= 80) {
+        document.body.classList.add('top-nav-dark');
+    } else {
+        document.body.classList.remove('top-nav-dark');
+    }
+}
+
 // Register scroll event listener once (prevents memory leak and CPU thrashing)
 lenis.on('scroll', ({ scroll }) => {
     const targets = document.querySelectorAll('.end-text');
     targets.forEach(target => {
         target.style.transform = `translateY(${scroll * 0.05}px)`;
     });
+    updateNavColors();
 });
+
+// Run updates on events
+window.addEventListener('load', updateNavColors);
+window.addEventListener('resize', updateNavColors);
+// Run initially and after a short delay to ensure rendering is stable
+updateNavColors();
+setTimeout(updateNavColors, 100);
 
 function raf(time) {
     lenis.raf(time);
