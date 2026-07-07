@@ -1,3 +1,5 @@
 .idx/
 .vscode/
 firebase-debug.log
+/assets
+ar.html
