@@ -35,7 +35,6 @@
     <!-- External Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
-    <script src="https://kit.fontawesome.com/56fd8d6ebf.js" crossorigin="anonymous"></script>
     
     <!-- Project Scripts -->
     <script defer src="script.js"></script>
@@ -249,10 +248,13 @@
         <section id="skills" class="min-h-screen flex items-center justify-center px-8 md:px-24 py-32">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full mx-auto">
                 <div class="lg:col-span-5 relative lg:order-last">
-                    <div class="image-container overflow-hidden bg-neutral-100 rounded-[2rem] shadow-lg">
-                        <img alt="Anime illustration of Ray"
+                    <div class="image-container overflow-hidden bg-neutral-100 rounded-lg">
+                        <img alt="Robotic Hand or Abstract Circuit Pattern"
                         class="reveal-image w-full h-full object-cover grayscale scale-100 will-change-transform"
                         src="https://i.pinimg.com/1200x/85/9d/4f/859d4f8d29362c1809dd05381cb9b027.jpg" />
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 flex items-center justify-center w-12 h-12 bg-accent text-white shadow-xl">
+                        <span class="material-symbols-outlined text-xl">smart_toy</span>
                     </div>
                 </div>
         
@@ -263,129 +265,35 @@
                     </div>
                     <h1 class="anime-text editorial-header font-serif leading-tight text-pure-black">My Skills<span class="text-accent">.</span></h1>
                     <div class="max-w-xl space-y-8">
-                        <p class="text-fade text-xl md:text-xl leading-[1.6] text-pure-black/80 font-normal">
-                            Building software that interacts with the real world. Ray combines programming, electronics, and automation to create
-                            systems that sense, respond, and solve practical problems.
+                        <p class="text-fade text-xl md:text-2xl leading-[1.6] text-pure-black/80 font-normal">
+                            Engineering at the edge where software meets the physical world. Ray crafts systems that
+                            leverage <span class="italic text-accent font-serif">computational logic</span> to
+                            animate static components into responsive, intelligent entities.
+                        </p>
+                        <p class="text-fade text-lg md:text-xl leading-[1.8] text-pure-black/60 font-light">
+                            Specializing in the deployment of autonomous architectures, the focus remains on the <span
+                                class="italic font-serif text-accent">seamless integration</span> of complex backend
+                            logic with tactile hardware interfaces.
                         </p>
         
-                        <!-- Core Stack -->
-                        <div class="element-slide">
-                            <h4 class="text-[10px] uppercase tracking-widest font-bold text-neutral-400 mb-4">Core Stack</h4>
-                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                                <!-- Node.js Card -->
-                                <div class="bg-white border border-neutral-200/60 rounded-2xl p-4 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-md hover:border-neutral-300 transition-all duration-300">
-                                    <div class="space-y-4">
-                                        <!-- Hexagon JS Icon -->
-                                        <i class="fa-brands fa-node-js text-4xl text-lime-500"></i>
-                                        <h3 class="text-sm md:text-base font-semibold text-pure-black tracking-tight leading-tight">Node.js</h3>
-                                    </div>
-                                    <div class="mt-4 space-y-2">
-                                        <div class="flex gap-1.5">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent/20"></span>
-                                        </div>
-                                        <span class="text-[9px] uppercase tracking-wider font-bold text-neutral-400 block leading-none">Advanced</span>
-                                    </div>
-                                </div>
-        
-                                <!-- Chatbots Card -->
-                                <div class="bg-white border border-neutral-200/60 rounded-2xl p-4 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-md hover:border-neutral-300 transition-all duration-300">
-                                    <div class="space-y-4">
-                                        <i class="fa-solid fa-brain text-3xl text-blue-600 leading-none h-8 flex items-center"></i>
-                                        <h3 class="text-sm md:text-base font-semibold text-pure-black tracking-tight leading-tight">Chatbots</h3>
-                                    </div>
-                                    <div class="mt-4 space-y-2">
-                                        <div class="flex gap-1.5">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent/20"></span>
-                                        </div>
-                                        <span class="text-[9px] uppercase tracking-wider font-bold text-neutral-400 block leading-none">Advanced</span>
-                                    </div>
-                                </div>
-        
-                                <!-- REST APIs Card -->
-                                <div class="bg-white border border-neutral-200/60 rounded-2xl p-4 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-md hover:border-neutral-300 transition-all duration-300">
-                                    <div class="space-y-4">
-                                        <span class="text-orange-500 font-mono text-3xl font-medium block leading-none h-8 flex items-center">{}</span>
-                                        <h3 class="text-sm md:text-base font-semibold text-pure-black tracking-tight leading-tight">REST APIs</h3>
-                                    </div>
-                                    <div class="mt-4 space-y-2">
-                                        <div class="flex gap-1.5">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent/20"></span>
-                                        </div>
-                                        <span class="text-[9px] uppercase tracking-wider font-bold text-neutral-400 block leading-none">Advanced</span>
-                                    </div>
-                                </div>
-        
-                                <!-- Vanilla Web Card -->
-                                <div class="bg-white border border-neutral-200/60 rounded-2xl p-4 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-md hover:border-neutral-300 transition-all duration-300">
-                                    <div class="space-y-4">
-                                        <span class="material-symbols-outlined text-3xl text-sky-600 block leading-none h-8 flex items-center">web_asset</span>
-                                        <h3 class="text-sm md:text-base font-semibold text-pure-black tracking-tight leading-tight">Vanilla Web</h3>
-                                    </div>
-                                    <div class="mt-4 space-y-2">
-                                        <div class="flex gap-1.5">
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                                            <span class="w-1.5 h-1.5 rounded-full bg-accent/20"></span>
-                                        </div>
-                                        <span class="text-[9px] uppercase tracking-wider font-bold text-neutral-400 block leading-none">Advanced</span>
-                                    </div>
-                                </div>
+                        <div class="element-slide element-slide pt-8 grid grid-cols-2 gap-8 border-t border-black/5">
+                            <div>
+                                <h4 class="text-[10px] uppercase tracking-widest font-bold mb-4 text-pure-black/40">Stack</h4>
+                                <ul class="text-base space-y-2 text-pure-black/70 font-medium">
+                                    <li>Node.js</li>
+                                    <li>Chatbots</li>
+                                    <li>REST APIs</li>
+                                    <li>Vanilla Web</li>
+                                </ul>
                             </div>
-                        </div>
-        
-                        <!-- Frontiers & Expertise -->
-                        <div class="element-slide pt-4">
-                            <h4 class="text-[10px] uppercase tracking-widest font-bold text-neutral-400 mb-4">Frontiers & Expertise</h4>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                                <!-- Robotics -->
-                                <div class="bg-neutral-50/50 border border-neutral-100 hover:border-neutral-200/80 hover:bg-neutral-50/80 rounded-xl p-3.5 flex items-center justify-between transition-all duration-300 group cursor-pointer">
-                                    <div class="flex items-center gap-3">
-                                        <span class="material-symbols-outlined text-neutral-500 group-hover:text-accent transition-colors duration-300 text-xl">precision_manufacturing</span>
-                                        <span class="text-sm font-semibold text-pure-black tracking-tight">Robotics</span>
-                                    </div>
-                                    <span class="material-symbols-outlined text-accent group-hover:translate-x-0.5 transition-transform duration-300 text-lg">arrow_forward</span>
-                                </div>
-        
-                                <!-- Computer Vision -->
-                                <div class="bg-neutral-50/50 border border-neutral-100 hover:border-neutral-200/80 hover:bg-neutral-50/80 rounded-xl p-3.5 flex items-center justify-between transition-all duration-300 group cursor-pointer">
-                                    <div class="flex items-center gap-3">
-                                        <span class="material-symbols-outlined text-neutral-500 group-hover:text-accent transition-colors duration-300 text-xl">visibility</span>
-                                        <span class="text-sm font-semibold text-pure-black tracking-tight">Computer Vision</span>
-                                    </div>
-                                    <span class="material-symbols-outlined text-accent group-hover:translate-x-0.5 transition-transform duration-300 text-lg">arrow_forward</span>
-                                </div>
-        
-                                <!-- Story Writing -->
-                                <div class="bg-neutral-50/50 border border-neutral-100 hover:border-neutral-200/80 hover:bg-neutral-50/80 rounded-xl p-3.5 flex items-center justify-between transition-all duration-300 group cursor-pointer">
-                                    <div class="flex items-center gap-3">
-                                        <span class="material-symbols-outlined text-neutral-500 group-hover:text-accent transition-colors duration-300 text-xl">history_edu</span>
-                                        <span class="text-sm font-semibold text-pure-black tracking-tight">Story Writing</span>
-                                    </div>
-                                    <span class="material-symbols-outlined text-accent group-hover:translate-x-0.5 transition-transform duration-300 text-lg">arrow_forward</span>
-                                </div>
-        
-                                <!-- Entrepreneurship -->
-                                <div class="bg-neutral-50/50 border border-neutral-100 hover:border-neutral-200/80 hover:bg-neutral-50/80 rounded-xl p-3.5 flex items-center justify-between transition-all duration-300 group cursor-pointer">
-                                    <div class="flex items-center gap-3">
-                                        <span class="material-symbols-outlined text-neutral-500 group-hover:text-accent transition-colors duration-300 text-xl">rocket_launch</span>
-                                        <span class="text-sm font-semibold text-pure-black tracking-tight">Entrepreneurship</span>
-                                    </div>
-                                    <span class="material-symbols-outlined text-accent group-hover:translate-x-0.5 transition-transform duration-300 text-lg">arrow_forward</span>
-                                </div>
+                            <div>
+                                <h4 class="text-[10px] uppercase tracking-widest font-bold mb-4 text-pure-black/40">Frontiers</h4>
+                                <ul class="text-base space-y-2 text-pure-black/70 font-medium">
+                                    <li>Robotics</li>
+                                    <li>Machine Learning</li>
+                                    <li>Story Writing</li>
+                                    <li>Entrepreneurship</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -412,7 +320,7 @@
                     </div>
                     <h1 class="anime-text editorial-header font-serif leading-tight">Contact Me<span class="text-accent">.</span></h1>
                     <div class="max-w-xl space-y-8">
-                        <p class="text-fade text-xl md:text-xl leading-[1.6] text-pure-black/80 font-normal">
+                        <p class="text-fade text-xl md:text-2xl leading-[1.6] text-pure-black/80 font-normal">
                             Open for <span class="italic text-accent font-serif">collaboration</span> on projects
                             that push the boundaries of design and logic. Let's explore <span class="italic font-serif text-accent">new frontiers</span> together.
                         </p>
