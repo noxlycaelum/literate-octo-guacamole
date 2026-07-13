@@ -90,7 +90,6 @@
                 }
             }
             .hero-title {
-                font-size: clamp(5rem, 15vw, 12rem);
                 letter-spacing: -0.02em;
             }
             .editorial-header {
@@ -142,8 +141,8 @@
             <nav id="top-nav" class="hidden md:block fixed top-0 left-0 w-full z-50 p-8 md:p-8 pointer-events-none">
                 <div class="flex justify-between items-start w-full text-[11px] tracking-[0.3em]">
                     <div class="pointer-events-auto flex items-center gap-2">
-                        <i class="fa-solid fa-cloud-showers-heavy text-3xl text-gray-700"></i>
-                        <span class="font-serif text-[24px] font-semibold leading-none tracking-wide">Ray<span class="text-accent">.</span></span>
+                        <i class="fa-solid fa-cloud-showers-heavy text-3xl text-accent"></i>
+                        <span class="font-serif text-[24px] font-semibold leading-none tracking-tight">Ray<span class="text-accent">.</span></span>
                         <!-- <a class="nav-link font-serif leading-none text-[25px] tracking-wide hover:tracking-wide hover:text-accent" href="#home">Ray<span class="text-accent">.</span></a> -->
                     </div>
                     <div class="pointer-events-auto flex gap-10 uppercase">
@@ -153,19 +152,9 @@
                     </div>
                 </div>
             </nav>
-            <nav id="bottom-nav" class="hidden md:block fixed bottom-0 left-0 w-full z-50 p-8 md:p-8 pointer-events-none">
-                <div class="flex justify-between items-end w-full text-[11px] tracking-[0.3em]">
-                    <div class="pointer-events-auto flex flex-col gap-2 uppercase">
-                        <a class="nav-link" href="https://discord.com/invite/hdXf6XHvMk" target="_blank">Discord</a>
-                    </div>
-                    <div class="pointer-events-auto text-right">
-                        <p class="nav-link font-serif leading-none text-[19px] tracking-wide hover:tracking-wide hover:text-accent">Tea<span class="text-accent">.</span></p>
-                    </div>
-                </div>
-            </nav>
         <section class="min-h-screen flex flex-col items-center justify-center px-6 py-32 relative overflow-hidden" id="home">
             <div
-                class="absolute inset-0 bg-[url('/assets/background/CRG1_ED.png')] bg-top bg-cover bg-no-repeat pointer-events-none opacity-85">
+                class="absolute inset-0 bg-[url('/assets/background/Background_wide.png')] bg-top bg-cover bg-no-repeat pointer-events-none">
             </div>
         
             <div class="end-text w-full max-w-4xl flex flex-col items-center text-center relative z-10">
@@ -176,13 +165,13 @@
                     </div>
                 </div>
         
-                <div class="relative mb-12">
-                    <h1 class="hero-title font-serif leading-none text-[#F4EEE3]">Ray<span class="text-accent">.</span></h1>
+                <div class="relative mt-0 ml-0 mb-12">
+                    <h1 class="text-[15rem] font-serif leading-none text-[#F4EEE3] tracking-tight">Ray<span class="text-accent">.</span></h1>
                     <div class="robot-icon material-symbols-outlined select-none">smart_toy</div>
                 </div>
         
                 <div class="max-w-2xl mx-auto">
-                    <p class="text-lg md:text-2xl leading-[1.8] font-light tracking-tight text-[#E8ECEF]">
+                    <p class="text-lg md:text-2xl leading-[1.8] font-light tracking-tight">
                         Full-stack developer, entrepreneur, and lifelong tinkerer. Building software since 2019, I explore
                         robotics, intelligent systems, and the ideas that shape how we think—from sci-fi worlds to paradoxes,
                         thought experiments, and cognitive biases.
