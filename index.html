@@ -48,7 +48,7 @@
                         "pure-black": "#000000",
                         "pure-white": "#FFFFFF",
                         "accent": "#8A2432",
-                        "bluey": "oklch(58.5% 0.233 277.117)",
+                        "subaccent": "#4338CA",
                     },
                     fontFamily: {
                         "sans": ["Inter", "sans-serif"],
@@ -223,7 +223,24 @@
                         <div class="bg-neutral-50 rounded-xl p-6 flex flex-col">
                             <div class="flex items-center justify-between mb-4">
                                 <span class="text-[10px] uppercase tracking-widest font-bold text-accent">Focus</span>
-                                <span class="material-symbols-outlined text-accent text-lg">track_changes</span>
+                                <svg fill="#8A2432" width="40px" height="40px" viewBox="0 0 36 36" version="1.1" preserveAspectRatio="xMidYMid meet"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="#8A2432"
+                                    transform="matrix(-1, 0, 0, 1, 0, 0)">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path d="M18,2a15.92,15.92,0,0,0-4.25.59l.77,1.86a14.07,14.07,0,1,1-10,10l-1.86-.78A16,16,0,1,0,18,2Z"
+                                            class="clr-i-outline clr-i-outline-path-1"></path>
+                                        <path d="M7.45,15.7a10.81,10.81,0,1,0,8.3-8.26L16.37,9A9.24,9.24,0,1,1,9,16.32Z"
+                                            class="clr-i-outline clr-i-outline-path-2"></path>
+                                        <path
+                                            d="M18,22.09a4.08,4.08,0,0,1-4-3.68l-1.63-.68c0,.09,0,.18,0,.27A5.69,5.69,0,1,0,18,12.31h-.24L18.43,14A4.07,4.07,0,0,1,18,22.09Z"
+                                            class="clr-i-outline clr-i-outline-path-3"></path>
+                                        <path
+                                            d="M8.2,13.34a.5.5,0,0,0,.35.15H12.2l5.37,5.37A1,1,0,0,0,19,17.44L13.53,12V8.51a.5.5,0,0,0-.15-.35L7.79,2.57a.5.5,0,0,0-.85.35v4H3a.5.5,0,0,0-.35.85Z"
+                                            class="clr-i-outline clr-i-outline-path-4"></path>
+                                    </g>
+                                </svg>
                             </div>
                             <h4 class="font-serif text-xl mb-5 text-pure-black">Where the energy goes.</h4>
         
@@ -265,9 +282,19 @@
                         <!-- CURRENT STATE CARD -->
                         <div class="bg-neutral-100 rounded-xl p-6 flex flex-col">
                             <div class="flex items-center justify-between mb-4">
-                                <span class="text-[10px] uppercase tracking-widest font-bold text-indigo-600">Current
+                                <span class="text-[10px] uppercase tracking-widest font-bold text-indigo-700">Current
                                     State</span>
-                                <span class="material-symbols-outlined text-indigo-600 text-lg">radar</span>
+                                <svg fill="#4338CA" width="40px" height="40px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    stroke="#4338CA" stroke-width="0.00032">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>bullseye</title>
+                                        <path
+                                            d="M16 0.75c-8.422 0-15.25 6.828-15.25 15.25s6.828 15.25 15.25 15.25c8.422 0 15.25-6.828 15.25-15.25v0c-0.010-8.418-6.832-15.24-15.249-15.25h-0.001zM16 28.75c-7.042 0-12.75-5.708-12.75-12.75s5.708-12.75 12.75-12.75c7.042 0 12.75 5.708 12.75 12.75v0c-0.008 7.038-5.712 12.742-12.749 12.75h-0.001zM16 5.75c-5.661 0-10.25 4.589-10.25 10.25s4.589 10.25 10.25 10.25c5.661 0 10.25-4.589 10.25-10.25v0c-0.006-5.658-4.592-10.244-10.249-10.25h-0.001zM16 23.75c-4.28 0-7.75-3.47-7.75-7.75s3.47-7.75 7.75-7.75c4.28 0 7.75 3.47 7.75 7.75v0c-0.005 4.278-3.472 7.745-7.75 7.75h-0zM16 10.75c-2.899 0-5.25 2.351-5.25 5.25s2.351 5.25 5.25 5.25c2.899 0 5.25-2.351 5.25-5.25v0c-0.004-2.898-2.352-5.246-5.25-5.25h-0zM16 18.75c-1.519 0-2.75-1.231-2.75-2.75s1.231-2.75 2.75-2.75c1.519 0 2.75 1.231 2.75 2.75v0c-0.002 1.518-1.232 2.748-2.75 2.75h-0z">
+                                        </path>
+                                    </g>
+                                </svg>
                             </div>
                             <h4 class="font-serif text-xl mb-5 text-pure-black">Now building.</h4>
         
@@ -276,7 +303,7 @@
         
                                 <div class="flex items-center gap-3 mb-3">
                                     <div class="flex-1 h-1.5 bg-black/10 rounded-full overflow-hidden">
-                                        <div class="h-full bg-indigo-600 rounded-full" style="width: 35%;"></div>
+                                        <div class="h-full bg-indigo-700 rounded-full" style="width: 35%;"></div>
                                     </div>
                                     <span class="text-xs font-bold text-pure-black/70">Early stage</span>
                                 </div>
