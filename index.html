@@ -16,15 +16,11 @@
     <meta property="og:url" content="https://helloray.vercel.app/" />
     <meta property="og:title" content="Ray — Full-Stack Developer & Entrepreneur" />
     <meta property="og:description" content="Full-stack hobbyist developer and aspiring entrepreneur building creative web experiences, intelligent systems, and experimental tech projects." />
-    <!-- <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" /> -->
     <meta property="og:site_name" content="Ray Portfolio" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://helloray.vercel.app/" />
     <meta name="twitter:title" content="Ray — Full-Stack Developer & Entrepreneur" />
     <meta name="twitter:description" content="Creative full-stack developer and builder of experimental tech and intelligent systems." />
-    <!-- <meta name="twitter:image" content="https://yourdomain.com/og-image.jpg" /> -->
     <meta name="format-detection" content="telephone=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -35,6 +31,7 @@
     <!-- External Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://kit.fontawesome.com/56fd8d6ebf.js" crossorigin="anonymous"></script>
     
     <!-- Project Scripts -->
     <script defer src="script.js"></script>
@@ -46,7 +43,8 @@
                     colors: {
                         "pure-black": "#000000",
                         "pure-white": "#FFFFFF",
-                        "accent": "#B11226",
+                        "accent": "#8A2432",
+                        "subaccent": "#4338CA",
                     },
                     fontFamily: {
                         "sans": ["Inter", "sans-serif"],
@@ -87,10 +85,6 @@
                     @apply bg-[#121212] text-pure-black font-sans antialiased selection:bg-accent selection:text-pure-white;
                 }
             }
-            .hero-title {
-                font-size: clamp(5rem, 15vw, 12rem);
-                letter-spacing: -0.02em;
-            }
             .editorial-header {
                 font-size: clamp(3rem, 8vw, 6rem);
                 letter-spacing: -0.03em;
@@ -103,9 +97,6 @@
                transition-[letter-spacing,color] duration-300 cursor-pointer;
             }
             body.top-nav-dark #top-nav .nav-link {
-                @apply text-pure-white hover:text-accent;
-            }
-            body.bottom-nav-dark #bottom-nav .nav-link {
                 @apply text-pure-white hover:text-accent;
             }
             .status-dot {
@@ -140,12 +131,8 @@
             <nav id="top-nav" class="hidden md:block fixed top-0 left-0 w-full z-50 p-8 md:p-8 pointer-events-none">
                 <div class="flex justify-between items-start w-full text-[11px] tracking-[0.3em]">
                     <div class="pointer-events-auto flex items-center gap-2">
-                        <svg class="w-8 h-8 text-accent" viewBox="0 0 640 640" fill="currentColor">
-                            <path
-                                d="M160 384C107 384 64 341 64 288C64 245.5 91.6 209.4 129.9 196.8C128.6 190.1 128 183.1 128 176C128 114.1 178.1 64 240 64C283.1 64 320.5 88.3 339.2 124C353.9 106.9 375.7 96 400 96C444.2 96 480 131.8 480 176C480 181.5 479.4 186.8 478.4 192C478.9 192 479.5 192 480 192C533 192 576 235 576 288C576 341 533 384 480 384L160 384zM166.8 463.6L134.8 559.6C130.6 572.2 117 579 104.4 574.8C91.8 570.6 85 557 89.2 544.4L121.2 448.4C125.4 435.8 139 429 151.6 433.2C164.2 437.4 171 451 166.8 463.6zM286.8 463.6L254.8 559.6C250.6 572.2 237 579 224.4 574.8C211.8 570.6 205 557 209.2 544.4L241.2 448.4C245.4 435.8 259 429 271.6 433.2C284.2 437.4 291 451 286.8 463.6zM398.8 463.6L366.8 559.6C362.6 572.2 349 579 336.4 574.8C323.8 570.6 317 557 321.2 544.4L353.2 448.4C357.4 435.8 371 429 383.6 433.2C396.2 437.4 403 451 398.8 463.6zM518.8 463.6L486.8 559.6C482.6 572.2 469 579 456.4 574.8C443.8 570.6 437 557 441.2 544.4L473.2 448.4C477.4 435.8 491 429 503.6 433.2C516.2 437.4 523 451 518.8 463.6z" />
-                        </svg>
-                        <span class="font-serif text-[24px] font-semibold leading-none tracking-wide">Ray<span class="text-accent">.</span></span>
-                        <!-- <a class="nav-link font-serif leading-none text-[25px] tracking-wide hover:tracking-wide hover:text-accent" href="#home">Ray<span class="text-accent">.</span></a> -->
+                        <i class="fa-solid fa-cloud-showers-heavy text-3xl text-accent"></i>
+                        <span class="font-serif text-[24px] font-semibold leading-none tracking-tight">Ray<span class="text-accent">.</span></span>
                     </div>
                     <div class="pointer-events-auto flex gap-10 uppercase">
                         <a class="nav-link" href="#skills">Skills</a>
@@ -154,99 +141,190 @@
                     </div>
                 </div>
             </nav>
-            <nav id="bottom-nav" class="hidden md:block fixed bottom-0 left-0 w-full z-50 p-8 md:p-8 pointer-events-none">
-                <div class="flex justify-between items-end w-full text-[11px] tracking-[0.3em]">
-                    <div class="pointer-events-auto flex flex-col gap-2 uppercase">
-                        <a class="nav-link" href="https://discord.com/invite/hdXf6XHvMk" target="_blank">Discord</a>
-                    </div>
-                    <div class="pointer-events-auto text-right">
-                        <p class="nav-link font-serif leading-none text-[19px] tracking-wide hover:tracking-wide hover:text-accent">Tea<span class="text-accent">.</span></p>
-                    </div>
-                </div>
-            </nav>
-        <section class="min-h-screen flex flex-col items-center justify-center px-6 py-32 relative" id="home">
-            <div class="end-text w-full max-w-4xl flex flex-col items-center text-center">
-                <div class="mb-12 group cursor-default hover">
-                    <div class="inline-flex items-center px-4 py-2 border border-pure-black/10 rounded-full text-[10px] uppercase tracking-widest font-semibold transition-all duration-300 group-hover:border-pure-black">
+        <section class="min-h-screen flex flex-col items-center justify-center px-6 py-32 relative overflow-hidden" id="home">
+            <div
+                class="absolute inset-0 bg-[url('/assets/background/AR22.png')] bg-top bg-cover bg-no-repeat pointer-events-none">
+            </div>
+            <div class="w-full max-w-4xl flex flex-col items-center text-center relative z-10">
+                <!-- <div class="mb-12 group cursor-default hover">
+                    <div
+                        class="inline-flex items-center px-4 py-2 border border-pure-black/10 rounded-full text-[10px] uppercase tracking-widest font-semibold transition-all duration-300 group-hover:border-pure-black">
                         <span class="status-dot"></span>
-                        Currently exploring: <span class="ml-1 opacity-60 group-hover:opacity-100 transition-opacity">Entrepreneurship</span>
+                        Currently exploring: <span
+                            class="ml-1 opacity-60 group-hover:opacity-100 transition-opacity">Entrepreneurship</span>
                     </div>
-                </div>
-                
+                </div> -->
+        
                 <div class="relative mb-12">
-                    <h1 class="hero-title font-serif leading-none">Ray<span class="text-accent">.</span></h1>
+                    <h1 class="text-[15rem] font-serif leading-none tracking-tight text-white">Ray<span class="text-accent">.</span></h1>
                     <div class="robot-icon material-symbols-outlined select-none">smart_toy</div>
                 </div>
-                  
+        
                 <div class="max-w-2xl mx-auto">
-                    <p class="text-lg md:text-2xl leading-[1.8] font-light tracking-tight text-pure-black/90">
-                        Full-stack developer, entrepreneur, and lifelong tinkerer. Building software since 2019, I explore robotics, intelligent
-                        systems, and the ideas that shape how we think—from sci-fi worlds to paradoxes, thought experiments, and cognitive
-                        biases.
+                    <p class="text-lg md:text-2xl leading-[1.8] font-light tracking-tight text-white/90">
+                        Full-stack developer, entrepreneur, and lifelong tinkerer. Building software since 2019, I explore
+                        robotics, intelligent systems, and the ideas that shape how we think—from sci-fi worlds to paradoxes,
+                        thought experiments, and cognitive biases.
                     </p>
                 </div>
-                <div class="mt-20 w-px h-24 bg-gradient-to-b from-pure-black to-transparent"></div>
             </div>
         </section>
 
         <section id="about" class="min-h-screen flex items-center justify-center px-8 md:px-24 py-32 relative">
-            <div class="end-text grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full mx-auto">
-                <div class="lg:col-span-5 relative">
-                    <div class="image-container overflow-hidden bg-neutral-100 rounded-lg">
-                        <img alt="Abstract Portrait/Robotic Element" 
-                        class="reveal-image w-full h-full object-cover grayscale scale-100 will-change-transform"
-                        src="https://i.pinimg.com/736x/a8/28/70/a8287059d237bbd396a4d66aa4b08000.jpg" />
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-stretch max-w-7xl w-full mx-auto">
+        
+                <!-- IMAGE COLUMN -->
+                <div class="lg:col-span-5 relative h-full">
+                    <div class="image-container overflow-hidden bg-neutral-100 rounded-xl h-full min-h-[520px] lg:min-h-full">
+                        <img alt="Abstract Portrait/Robotic Element"
+                            class="reveal-image w-full h-full object-cover grayscale scale-100 will-change-transform"
+                            src="https://i.pinimg.com/736x/a8/28/70/a8287059d237bbd396a4d66aa4b08000.jpg" />
                     </div>
                     <div class="absolute -bottom-6 -right-6 flex items-center justify-center w-12 h-12 bg-accent text-white">
                         <span class="material-symbols-outlined text-xl">smart_toy</span>
                     </div>
                 </div>
-
+        
+                <!-- TEXT COLUMN -->
                 <div class="lg:col-span-7 flex flex-col justify-center">
                     <div class="mb-6 flex items-center gap-4">
                         <span class="h-px w-12 bg-accent"></span>
                         <span class="text-[10px] uppercase tracking-widest font-bold text-accent">The Story</span>
                     </div>
-                    
+        
                     <h1 class="anime-text editorial-header font-serif leading-tight">
                         About Ray<span class="text-accent">.</span>
                     </h1>
-                    
+        
                     <div class="max-w-xl space-y-8">
-                        <p class="text-fade text-xl md:text-2xl leading-[1.6] text-pure-black/80 font-normal">
-                            Ray’s journey began at the intersection of logical structures and human curiosity. As a full-stack hobbyist, he bridges the gap between functional code and the poetic nature of <span class="italic text-accent font-serif">robotics</span>.
+                        <p class="text-fade text-2xl md:text-[23px] leading-[1.6] text-pure-black/80 font-normal">
+                            Ray's journey began where technology meets curiosity. A full-stack hobbyist, he enjoys building
+                            software while exploring
+                            the intersection of AI, robotics, and thoughtful design.
                         </p>
-                        <p class="text-fade text-lg md:text-xl leading-[1.8] text-pure-black/60 font-light">
-                            Driven by a lifelong fascination with <span class="italic font-serif text-accent">philosophy</span>, his work isn't just about building tools, but questioning the nature of our interactions with autonomous systems. Every project is an experiment in minimalist engineering—stripping away the noise to find the core purpose of a digital experience.
-                        </p>
-
-                        <div class="element-slide pt-8 grid grid-cols-2 gap-8 border-t border-black/5">
-                            <div>
-                                <h4 class="text-[10px] uppercase tracking-widest font-bold mb-2">Focus</h4>
-                                <ul class="text-sm space-y-1 text-pure-black/70">
-                                    <li>Entrepreneurship</li>
-                                    <li>AI Research</li>
-                                    <li>Community Building</li>
-                                </ul>
+                    </div>
+        
+                    <div class="element-slide pt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 border-t border-black/5">
+        
+                        <!-- FOCUS CARD -->
+                        <div class="bg-neutral-50 rounded-xl p-6 flex flex-col">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-[10px] uppercase tracking-widest font-bold text-accent">Focus</span>
+                                <svg fill="#8A2432" width="40px" height="40px" viewBox="0 0 36 36" version="1.1" preserveAspectRatio="xMidYMid meet"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="#8A2432"
+                                    transform="matrix(-1, 0, 0, 1, 0, 0)">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path d="M18,2a15.92,15.92,0,0,0-4.25.59l.77,1.86a14.07,14.07,0,1,1-10,10l-1.86-.78A16,16,0,1,0,18,2Z"
+                                            class="clr-i-outline clr-i-outline-path-1"></path>
+                                        <path d="M7.45,15.7a10.81,10.81,0,1,0,8.3-8.26L16.37,9A9.24,9.24,0,1,1,9,16.32Z"
+                                            class="clr-i-outline clr-i-outline-path-2"></path>
+                                        <path
+                                            d="M18,22.09a4.08,4.08,0,0,1-4-3.68l-1.63-.68c0,.09,0,.18,0,.27A5.69,5.69,0,1,0,18,12.31h-.24L18.43,14A4.07,4.07,0,0,1,18,22.09Z"
+                                            class="clr-i-outline clr-i-outline-path-3"></path>
+                                        <path
+                                            d="M8.2,13.34a.5.5,0,0,0,.35.15H12.2l5.37,5.37A1,1,0,0,0,19,17.44L13.53,12V8.51a.5.5,0,0,0-.15-.35L7.79,2.57a.5.5,0,0,0-.85.35v4H3a.5.5,0,0,0-.35.85Z"
+                                            class="clr-i-outline clr-i-outline-path-4"></path>
+                                    </g>
+                                </svg>
                             </div>
-                            <div>
-                                <h4 class="text-[10px] uppercase tracking-widest font-bold mb-2">Current State</h4>
-                                <div class="flex items-center gap-2">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                                    <span class="text-sm text-pure-black/70">Building business</span>
+                            <h4 class="font-serif text-xl mb-5 text-pure-black">Where the energy goes.</h4>
+        
+                            <div class="space-y-3">
+                                <div class="flex items-start gap-3">
+                                    <div class="w-9 h-9 flex-shrink-0 rounded-lg bg-accent/10 flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-accent text-[18px]">lightbulb</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-medium text-pure-black">Entrepreneurship</p>
+                                        <p class="text-xs text-pure-black/50">Turning ideas into real-world impact.</p>
+                                    </div>
+                                </div>
+        
+                                <div class="flex items-start gap-3">
+                                    <div class="w-9 h-9 flex-shrink-0 rounded-lg bg-accent/10 flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-accent text-[18px]">psychology</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-medium text-pure-black">AI Research</p>
+                                        <p class="text-xs text-pure-black/50">Exploring intelligence, models, and possibilities.
+                                        </p>
+                                    </div>
+                                </div>
+        
+                                <div class="flex items-start gap-3">
+                                    <div class="w-9 h-9 flex-shrink-0 rounded-lg bg-accent/10 flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-accent text-[18px]">groups</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-medium text-pure-black">Discord Community Admin</p>
+                                        <p class="text-xs text-pure-black/50">Runs the official server for Khooni Monday —
+                                            5,200+ members.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+        
+                        <!-- CURRENT STATE CARD -->
+                        <div class="bg-neutral-100 rounded-xl p-6 flex flex-col">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-[10px] uppercase tracking-widest font-bold text-subaccent">Current
+                                    State</span>
+                                <svg fill="#4338CA" width="40px" height="40px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    stroke="#4338CA" stroke-width="0.00032">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>bullseye</title>
+                                        <path
+                                            d="M16 0.75c-8.422 0-15.25 6.828-15.25 15.25s6.828 15.25 15.25 15.25c8.422 0 15.25-6.828 15.25-15.25v0c-0.010-8.418-6.832-15.24-15.249-15.25h-0.001zM16 28.75c-7.042 0-12.75-5.708-12.75-12.75s5.708-12.75 12.75-12.75c7.042 0 12.75 5.708 12.75 12.75v0c-0.008 7.038-5.712 12.742-12.749 12.75h-0.001zM16 5.75c-5.661 0-10.25 4.589-10.25 10.25s4.589 10.25 10.25 10.25c5.661 0 10.25-4.589 10.25-10.25v0c-0.006-5.658-4.592-10.244-10.249-10.25h-0.001zM16 23.75c-4.28 0-7.75-3.47-7.75-7.75s3.47-7.75 7.75-7.75c4.28 0 7.75 3.47 7.75 7.75v0c-0.005 4.278-3.472 7.745-7.75 7.75h-0zM16 10.75c-2.899 0-5.25 2.351-5.25 5.25s2.351 5.25 5.25 5.25c2.899 0 5.25-2.351 5.25-5.25v0c-0.004-2.898-2.352-5.246-5.25-5.25h-0zM16 18.75c-1.519 0-2.75-1.231-2.75-2.75s1.231-2.75 2.75-2.75c1.519 0 2.75 1.231 2.75 2.75v0c-0.002 1.518-1.232 2.748-2.75 2.75h-0z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h4 class="font-serif text-xl mb-5 text-pure-black">Now building.</h4>
+        
+                            <div class="bg-white rounded-lg flex-1 flex flex-col p-4">
+                                <p class="font-serif text-base text-pure-black mb-3">AI-based drone startup</p>
+        
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="flex-1 h-1.5 bg-black/10 rounded-full overflow-hidden">
+                                        <div class="h-full bg-subaccent rounded-full" style="width: 55%;"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pure-black/70">Early stage</span>
+                                </div>
+        
+                                <p class="text-xs text-pure-black/50 leading-relaxed mt-auto">
+                                    Working on the foundation.
+                                </p>
+                            </div>
+                            <div class="bg-white rounded-lg flex-1 flex flex-col p-4">
+                                <p class="font-serif text-base text-pure-black mb-3">Cyberpunk-styled ONA</p>
+                            
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="flex-1 h-1.5 bg-black/10 rounded-full overflow-hidden">
+                                        <div class="h-full bg-subaccent rounded-full" style="width: 25%;"></div>
+                                    </div>
+                                    <span class="text-xs font-bold text-pure-black/70">Scripting</span>
+                                </div>
+                            
+                                <p class="text-xs text-pure-black/50 leading-relaxed mt-auto">
+                                    Writing the story.
+                                </p>
+                            </div>
+                        </div>
+        
                     </div>
                 </div>
             </div>
         </section>
+
         <section id="skills" class="min-h-screen flex items-center justify-center px-8 md:px-24 py-32">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-stretch max-w-7xl w-full mx-auto">
                 <div class="lg:col-span-5 relative lg:order-last">
-                    <div class="image-container overflow-hidden bg-neutral-100 rounded-lg">
-                        <img alt="Robotic Hand or Abstract Circuit Pattern"
-                        class="reveal-image w-full h-full object-cover grayscale scale-100 will-change-transform"
+                    <div class="image-container overflow-hidden bg-neutral-100 rounded-xl h-full min-h-[520px] lg:min-h-full">
+                        <img class="reveal-image w-full h-full object-cover grayscale scale-100 will-change-transform"
                         src="https://i.pinimg.com/1200x/85/9d/4f/859d4f8d29362c1809dd05381cb9b027.jpg" />
                     </div>
                     <div class="absolute -bottom-6 -left-6 flex items-center justify-center w-12 h-12 bg-accent text-white shadow-xl">
@@ -261,35 +339,129 @@
                     </div>
                     <h1 class="anime-text editorial-header font-serif leading-tight text-pure-black">My Skills<span class="text-accent">.</span></h1>
                     <div class="max-w-xl space-y-8">
-                        <p class="text-fade text-xl md:text-2xl leading-[1.6] text-pure-black/80 font-normal">
-                            Engineering at the edge where software meets the physical world. Ray crafts systems that
-                            leverage <span class="italic text-accent font-serif">computational logic</span> to
-                            animate static components into responsive, intelligent entities.
-                        </p>
-                        <p class="text-fade text-lg md:text-xl leading-[1.8] text-pure-black/60 font-light">
-                            Specializing in the deployment of autonomous architectures, the focus remains on the <span
-                                class="italic font-serif text-accent">seamless integration</span> of complex backend
-                            logic with tactile hardware interfaces.
+                        <p class="text-fade text-xl md:text-xl leading-[1.6] text-pure-black/80 font-normal">
+                            Building software that interacts with the real world. Ray combines programming, electronics, and automation to create
+                            systems that sense, respond, and solve practical problems.
                         </p>
         
-                        <div class="element-slide element-slide pt-8 grid grid-cols-2 gap-8 border-t border-black/5">
-                            <div>
-                                <h4 class="text-[10px] uppercase tracking-widest font-bold mb-4 text-pure-black/40">Stack</h4>
-                                <ul class="text-base space-y-2 text-pure-black/70 font-medium">
-                                    <li>Node.js</li>
-                                    <li>Chatbots</li>
-                                    <li>REST APIs</li>
-                                    <li>Vanilla Web</li>
-                                </ul>
+                        <!-- Core Stack -->
+                        <div class="element-slide">
+                            <h4 class="text-[10px] uppercase tracking-widest font-bold text-neutral-400 mb-4">Core Stack</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                <!-- Node.js Card -->
+                                <div class="bg-white border border-neutral-200/60 rounded-2xl p-4 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-md hover:border-neutral-300 transition-all duration-300">
+                                    <div class="space-y-4">
+                                        <!-- Hexagon JS Icon -->
+                                        <i class="fa-brands fa-node-js text-4xl text-lime-500"></i>
+                                        <h3 class="text-sm md:text-base font-semibold text-pure-black tracking-tight leading-tight">Node.js</h3>
+                                    </div>
+                                    <div class="mt-4 space-y-2">
+                                        <div class="flex gap-1.5">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent/20"></span>
+                                        </div>
+                                        <span class="text-[9px] uppercase tracking-wider font-bold text-neutral-400 block leading-none">Advanced</span>
+                                    </div>
+                                </div>
+        
+                                <!-- Chatbots Card -->
+                                <div class="bg-white border border-neutral-200/60 rounded-2xl p-4 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-md hover:border-neutral-300 transition-all duration-300">
+                                    <div class="space-y-4">
+                                        <i class="fa-solid fa-brain text-3xl text-blue-600 leading-none h-8 flex items-center"></i>
+                                        <h3 class="text-sm md:text-base font-semibold text-pure-black tracking-tight leading-tight">Chatbots</h3>
+                                    </div>
+                                    <div class="mt-4 space-y-2">
+                                        <div class="flex gap-1.5">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent/20"></span>
+                                        </div>
+                                        <span class="text-[9px] uppercase tracking-wider font-bold text-neutral-400 block leading-none">Advanced</span>
+                                    </div>
+                                </div>
+        
+                                <!-- REST APIs Card -->
+                                <div class="bg-white border border-neutral-200/60 rounded-2xl p-4 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-md hover:border-neutral-300 transition-all duration-300">
+                                    <div class="space-y-4">
+                                        <span class="text-orange-500 font-mono text-3xl font-medium block leading-none h-8 flex items-center">{}</span>
+                                        <h3 class="text-sm md:text-base font-semibold text-pure-black tracking-tight leading-tight">REST APIs</h3>
+                                    </div>
+                                    <div class="mt-4 space-y-2">
+                                        <div class="flex gap-1.5">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent/20"></span>
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent/20"></span>
+                                        </div>
+                                        <span class="text-[9px] uppercase tracking-wider font-bold text-neutral-400 block leading-none">intermediate</span>
+                                    </div>
+                                </div>
+        
+                                <!-- Vanilla Web Card -->
+                                <div class="bg-white border border-neutral-200/60 rounded-2xl p-4 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-md hover:border-neutral-300 transition-all duration-300">
+                                    <div class="space-y-4">
+                                        <span class="material-symbols-outlined text-3xl text-sky-600 block leading-none h-8 flex items-center">web_asset</span>
+                                        <h3 class="text-sm md:text-base font-semibold text-pure-black tracking-tight leading-tight">Vanilla Web</h3>
+                                    </div>
+                                    <div class="mt-4 space-y-2">
+                                        <div class="flex gap-1.5">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                                            <span class="w-1.5 h-1.5 rounded-full bg-accent/20"></span>
+                                        </div>
+                                        <span class="text-[9px] uppercase tracking-wider font-bold text-neutral-400 block leading-none">Advanced</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <h4 class="text-[10px] uppercase tracking-widest font-bold mb-4 text-pure-black/40">Frontiers</h4>
-                                <ul class="text-base space-y-2 text-pure-black/70 font-medium">
-                                    <li>Robotics</li>
-                                    <li>Machine Learning</li>
-                                    <li>Story Writing</li>
-                                    <li>Entrepreneurship</li>
-                                </ul>
+                        </div>
+        
+                        <!-- Frontiers & Expertise -->
+                        <div class="element-slide pt-4">
+                            <h4 class="text-[10px] uppercase tracking-widest font-bold text-neutral-400 mb-4">Frontiers & Expertise</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                                <!-- Robotics -->
+                                <div class="bg-neutral-50/50 border border-neutral-100 hover:border-neutral-200/80 hover:bg-neutral-50/80 rounded-xl p-3.5 flex items-center justify-between transition-all duration-300 group cursor-pointer">
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-neutral-500 group-hover:text-accent transition-colors duration-300 text-xl">precision_manufacturing</span>
+                                        <span class="text-sm font-semibold text-pure-black tracking-tight">Robotics</span>
+                                    </div>
+                                    <span class="material-symbols-outlined text-accent group-hover:translate-x-0.5 transition-transform duration-300 text-lg">arrow_forward</span>
+                                </div>
+        
+                                <!-- Computer Vision -->
+                                <div class="bg-neutral-50/50 border border-neutral-100 hover:border-neutral-200/80 hover:bg-neutral-50/80 rounded-xl p-3.5 flex items-center justify-between transition-all duration-300 group cursor-pointer">
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-neutral-500 group-hover:text-accent transition-colors duration-300 text-xl">visibility</span>
+                                        <span class="text-sm font-semibold text-pure-black tracking-tight">Computer Vision</span>
+                                    </div>
+                                    <span class="material-symbols-outlined text-accent group-hover:translate-x-0.5 transition-transform duration-300 text-lg">arrow_forward</span>
+                                </div>
+        
+                                <!-- Story Writing -->
+                                <div class="bg-neutral-50/50 border border-neutral-100 hover:border-neutral-200/80 hover:bg-neutral-50/80 rounded-xl p-3.5 flex items-center justify-between transition-all duration-300 group cursor-pointer">
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-neutral-500 group-hover:text-accent transition-colors duration-300 text-xl">history_edu</span>
+                                        <span class="text-sm font-semibold text-pure-black tracking-tight">Story Writing</span>
+                                    </div>
+                                    <span class="material-symbols-outlined text-accent group-hover:translate-x-0.5 transition-transform duration-300 text-lg">arrow_forward</span>
+                                </div>
+        
+                                <!-- Entrepreneurship -->
+                                <div class="bg-neutral-50/50 border border-neutral-100 hover:border-neutral-200/80 hover:bg-neutral-50/80 rounded-xl p-3.5 flex items-center justify-between transition-all duration-300 group cursor-pointer">
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-neutral-500 group-hover:text-accent transition-colors duration-300 text-xl">rocket_launch</span>
+                                        <span class="text-sm font-semibold text-pure-black tracking-tight">Entrepreneurship</span>
+                                    </div>
+                                    <span class="material-symbols-outlined text-accent group-hover:translate-x-0.5 transition-transform duration-300 text-lg">arrow_forward</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -298,9 +470,9 @@
             </div>
         </section>
         <section id="contact" class="min-h-screen flex items-center justify-center px-8 md:px-24 py-32">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center max-w-7xl w-full mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-stretch max-w-7xl w-full mx-auto">
                 <div class="lg:col-span-5 relative">
-                    <div class="image-container overflow-hidden bg-neutral-100 rounded-lg transition-all duration-700 ease-in-out">
+                    <div class="image-container overflow-hidden bg-neutral-100 rounded-xl h-full min-h-[520px] lg:min-h-full">
                         <img alt="Robotic Hand or Abstract Circuit Pattern"
                         class="reveal-image w-full h-full object-cover grayscale scale-100 will-change-transform"
                             src="https://i.pinimg.com/1200x/c2/02/b6/c202b6ba54cca7769ce64175453760e4.jpg" />
@@ -316,35 +488,127 @@
                     </div>
                     <h1 class="anime-text editorial-header font-serif leading-tight">Contact Me<span class="text-accent">.</span></h1>
                     <div class="max-w-xl space-y-8">
-                        <p class="text-fade text-xl md:text-2xl leading-[1.6] text-pure-black/80 font-normal">
+                        <p class="text-fade text-xl md:text-xl leading-[1.6] text-pure-black/80 font-normal">
                             Open for <span class="italic text-accent font-serif">collaboration</span> on projects
-                            that push the boundaries of design and logic. Let’s explore <span class="italic font-serif text-accent">new frontiers</span> together.
+                            that push the boundaries of design and logic. Let's explore <span class="italic font-serif text-accent">new frontiers</span> together.
                         </p>
-                        <div class="element-slide pt-8 grid grid-cols-2 gap-8 border-t border-black/5">
-                            <div>
-                                <h4 class="text-[10px] uppercase tracking-widest font-bold mb-4 text-pure-black/40">
-                                    Inquiries</h4>
-                                <ul class="text-sm space-y-3 font-medium">
-                                    <li>
-                                        <a class="hover:text-accent transition-colors flex items-center gap-2"
-                                            href="mailto:raytracingrain@outlook.com">
-                                            Email
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 class="text-[10px] uppercase tracking-widest font-bold mb-4 text-pure-black/40">
-                                    Social</h4>
-                                <ul class="text-sm space-y-3 font-medium">
-                                    <li><a class="hover:text-accent transition-colors" href="https://x.com/bitwiseray" target="_blank">X</a></li>
-                                    <li><a class="hover:text-accent transition-colors" href="https://www.instagram.com/noxlycaelum" target="_blank">Instagram</a></li>
-                                    <li><a class="hover:text-accent transition-colors" href="https://www.github.com/noxlycaelum" target="_blank">GitHub</a></li>
-                                    <li><a class="hover:text-accent transition-colors" href="https://discord.com/invite/hdXf6XHvMk" target="_blank">Discord</a></li>
-                                    <li><a class="hover:text-accent transition-colors" href="https://pinterest.com/noxlycaelum/" target="_blank">Pinterest</a></li>
-                                    <li><a class="hover:text-accent transition-colors" href="https://www.myanimelist.net/profile/noxlycaelum" target="_blank">MAL</a></li>
-                                    <li><a class="hover:text-accent transition-colors" href="https://letterboxd.com/noxlycaelum/" target="_blank">Letterboxd</a></li>
-                                </ul>
+                        
+                        <div class="element-slide space-y-6">
+                            <!-- Inquiries Card -->
+                            <a href="mailto:raytracingrain@outlook.com" class="w-full bg-white border border-neutral-200/80 rounded-2xl shadow-sm flex items-center justify-between p-5 hover:border-accent/30 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-accent/5 flex items-center justify-center text-accent transition-colors duration-300 group-hover:bg-accent/10">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                        </svg>
+                                    </div>
+                                    <div class="flex flex-col ml-4 text-left">
+                                        <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest leading-none">Inquiries</span>
+                                        <span class="text-base md:text-lg font-medium text-pure-black mt-1.5 transition-colors duration-300 group-hover:text-accent">raytracingrain@outlook.com</span>
+                                    </div>
+                                </div>
+                                <svg class="w-4 h-4 text-neutral-400 group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/>
+                                </svg>
+                            </a>
+
+                            <!-- Socials Section -->
+                            <div class="space-y-4 text-left">
+                                <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block text-neutral-400">Socials</span>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                                    <!-- X (Twitter) -->
+                                    <a href="https://x.com/bitwiseray" target="_blank" class="flex items-center gap-3 bg-white border border-neutral-200/80 rounded-xl px-5 py-4 hover:border-accent/30 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer">
+                                        <svg class="w-5 h-5 text-pure-black" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                        </svg>
+                                        <span class="text-sm font-semibold text-pure-black transition-colors duration-300 group-hover:text-accent">X (Twitter)</span>
+                                        <svg class="w-4 h-4 text-neutral-300 group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 ml-auto" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/>
+                                        </svg>
+                                    </a>
+
+                                    <!-- Instagram -->
+                                    <a href="https://www.instagram.com/noxlycaelum" target="_blank" class="flex items-center gap-3 bg-white border border-neutral-200/80 rounded-xl px-5 py-4 hover:border-accent/30 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer">
+                                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" fill="url(#instagram-gradient-contact)" />
+                                            <defs>
+                                                <radialGradient id="instagram-gradient-contact" cx="30%" cy="107%" r="130%" fx="30%" fy="107%">
+                                                    <stop offset="0%" stop-color="#fdf497" />
+                                                    <stop offset="5%" stop-color="#fdf497" />
+                                                    <stop offset="45%" stop-color="#fd5949" />
+                                                    <stop offset="60%" stop-color="#d6249f" />
+                                                    <stop offset="90%" stop-color="#285AEB" />
+                                                </radialGradient>
+                                            </defs>
+                                        </svg>
+                                        <span class="text-sm font-semibold text-pure-black transition-colors duration-300 group-hover:text-accent">Instagram</span>
+                                        <svg class="w-4 h-4 text-neutral-300 group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 ml-auto" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/>
+                                        </svg>
+                                    </a>
+
+                                    <!-- GitHub -->
+                                    <a href="https://www.github.com/noxlycaelum" target="_blank" class="flex items-center gap-3 bg-white border border-neutral-200/80 rounded-xl px-5 py-4 hover:border-accent/30 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer">
+                                        <svg class="w-5 h-5 text-pure-black" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                                        </svg>
+                                        <span class="text-sm font-semibold text-pure-black transition-colors duration-300 group-hover:text-accent">GitHub</span>
+                                        <svg class="w-4 h-4 text-neutral-300 group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 ml-auto" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/>
+                                        </svg>
+                                    </a>
+
+                                    <!-- Pinterest -->
+                                    <a href="https://pinterest.com/noxlycaelum/" target="_blank" class="flex items-center gap-3 bg-white border border-neutral-200/80 rounded-xl px-5 py-4 hover:border-accent/30 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer">
+                                        <svg class="w-5 h-5" fill="#E60023" viewBox="0 0 24 24">
+                                            <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+                                        </svg>
+                                        <span class="text-sm font-semibold text-pure-black transition-colors duration-300 group-hover:text-accent">Pinterest</span>
+                                        <svg class="w-4 h-4 text-neutral-300 group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 ml-auto" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/>
+                                        </svg>
+                                    </a>
+
+                                    <!-- Discord -->
+                                    <a href="https://discord.com/invite/hdXf6XHvMk" target="_blank" class="flex items-center gap-3 bg-white border border-neutral-200/80 rounded-xl px-5 py-4 hover:border-accent/30 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer">
+                                        <svg class="w-5 h-5" fill="#5865F2" viewBox="0 0 24 24">
+                                            <path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.094 13.094 0 01-1.873-.894.077.077 0 01-.008-.128c.126-.093.252-.19.372-.287a.075.075 0 01.077-.011c3.92 1.793 8.18 1.793 12.061 0a.073.073 0 01.078.009c.12.099.246.195.373.289a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.894.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.156 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.156 2.418z"/>
+                                        </svg>
+                                        <span class="text-sm font-semibold text-pure-black transition-colors duration-300 group-hover:text-accent">Discord</span>
+                                        <svg class="w-4 h-4 text-neutral-300 group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 ml-auto" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/>
+                                        </svg>
+                                    </a>
+
+                                    <!-- Letterboxd -->
+                                    <a href="https://letterboxd.com/noxlycaelum/" target="_blank" class="flex items-center gap-3 bg-white border border-neutral-200/80 rounded-xl px-5 py-4 hover:border-accent/30 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer">
+                                        <div class="flex items-center gap-[2px]">
+                                            <span class="w-[9px] h-[9px] rounded-full bg-[#FF8000] inline-block"></span>
+                                            <span class="w-[9px] h-[9px] rounded-full bg-[#00E054] inline-block -ml-[3px]"></span>
+                                            <span class="w-[9px] h-[9px] rounded-full bg-[#00B0EA] inline-block -ml-[3px]"></span>
+                                        </div>
+                                        <span class="text-sm font-semibold text-pure-black transition-colors duration-300 group-hover:text-accent">Letterboxd</span>
+                                        <svg class="w-4 h-4 text-neutral-300 group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 ml-auto" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/>
+                                        </svg>
+                                    </a>
+
+                                    <!-- MAL -->
+                                    <a href="https://www.myanimelist.net/profile/noxlycaelum" target="_blank" class="flex items-center gap-3 bg-white border border-neutral-200/80 rounded-xl px-5 py-4 hover:border-accent/30 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer">
+                                        <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path cx="512" cy="512" r="512" style="fill:#2e51a2"
+                                                d="M24 12A12 12 0 0 1 12 24A12 12 0 0 1 0 12A12 12 0 0 1 24 12z" />
+                                            <path
+                                                d="M10.136 9.624V13.835l-1.051 -0.001V11.227l-1.015 1.202 -0.994 -1.229 -0.01 2.643H6V9.625h1.102l0.933 1.272 1.008 -1.273zm4.314 1.035 0.012 3.168h-1.182l-0.004 -1.436h-1.4c0.035 0.25 0.105 0.633 0.209 0.891 0.078 0.191 0.149 0.375 0.292 0.564l-0.852 0.563c-0.175 -0.318 -0.311 -0.668 -0.439 -1.041a4.648 4.648 0 0 1 -0.254 -1.09c-0.042 -0.375 -0.049 -0.735 0.053 -1.106a1.954 1.954 0 0 1 0.581 -0.933c0.157 -0.146 0.375 -0.25 0.55 -0.344s0.371 -0.132 0.554 -0.18a3.703 3.703 0 0 1 0.596 -0.091c0.199 -0.017 0.554 -0.033 1.195 -0.014l0.273 0.874h-1.378c-0.296 0.004 -0.439 0 -0.671 0.105a1.118 1.118 0 0 0 -0.639 0.961l1.331 0.016 0.019 -0.905h1.155zM16.447 9.609v3.313L18 12.938l-0.215 0.888H15.382V9.594z"
+                                                style="fill:#fff" />
+                                        </svg>
+                                        
+                                        <span class="text-sm font-semibold text-pure-black transition-colors duration-300 group-hover:text-accent">MAL</span>
+                                        <svg class="w-4 h-4 text-neutral-300 group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 ml-auto" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

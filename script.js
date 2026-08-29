@@ -38,15 +38,6 @@ function updateNavColors() {
     }
 }
 
-// Register scroll event listener once (prevents memory leak and CPU thrashing)
-lenis.on('scroll', ({ scroll }) => {
-    const targets = document.querySelectorAll('.end-text');
-    targets.forEach(target => {
-        target.style.transform = `translateY(${scroll * 0.05}px)`;
-    });
-    updateNavColors();
-});
-
 // Run updates on events
 window.addEventListener('load', updateNavColors);
 window.addEventListener('resize', updateNavColors);
